@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ruta 1 — Puerto Berrío esencial</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/theme.css"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { primary: "#2b636a", "primary-dim": "#1c575d", "on-primary": "#d2faff", "primary-container": "#aee7ed",
+    surface: "#fbf6ee", "on-surface": "#302f2a", "on-surface-variant": "#5e5b55", "surface-container-low": "#f5f0e8",
+    "surface-container-lowest": "#ffffff", tertiary: "#576100" },
+  fontFamily: { headline: ["Plus Jakarta Sans","sans-serif"], body: ["Manrope","sans-serif"] }
+}}}
+</script>
+<style>.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }</style>
+<script defer src="assets/js/site.js"></script>
+</head>
+<body class="text-on-surface pb-24">
+<header class="site-header fixed top-0 w-full z-50 bg-[#fbf6ee]/85 backdrop-blur-md flex flex-wrap justify-between items-center gap-2 px-4 md:px-6 min-h-16 py-2">
+  <div class="flex items-center gap-2">
+    <a href="explorar-rutas.html" class="text-[#19555B] p-2 rounded-full hover:bg-black/5" aria-label="Volver"><span class="material-symbols-outlined">arrow_back</span></a>
+    <a href="index.html" class="brand-mark">
+      <span class="brand-title">Magdalena Medio</span>
+      <span class="brand-tagline">Turismo ganadero</span>
+    </a>
+  </div>
+  <nav class="hidden md:flex gap-4 text-sm font-bold text-primary pr-2">
+    <a href="mapa.html?ruta=1" class="nav-link">Mapa ruta 1</a>
+    <a href="directorio.html" class="nav-link">Directorio</a>
+  </nav>
+</header>
+
+<main class="mt-16 max-w-4xl mx-auto">
+<section class="relative w-full h-[320px] md:h-[397px] overflow-hidden">
+<img class="w-full h-full object-cover" alt="Alojamiento y base en Puerto Berrío" src="assets/images/22.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-6 right-6">
+<div class="bg-white/85 backdrop-blur-xl p-6 rounded-2xl shadow-xl">
+<span class="text-[0.75rem] font-bold tracking-widest uppercase text-tertiary mb-1 block">3 días / 2 noches</span>
+<h1 class="text-3xl font-extrabold text-primary tracking-tight leading-none mb-2">Ruta 1 — Puerto Berrío esencial</h1>
+<p class="text-on-surface-variant text-sm">Ciudad, parques y gastronomía. Primera inmersión en el corazón ferroviario y ribereño.</p>
+</div>
+</div>
+</section>
+
+<div class="px-6 py-10 grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-8">
+<h2 class="text-2xl font-bold text-on-surface mb-6 font-headline">Itinerario sugerido</h2>
+<ol class="space-y-4 list-none">
+<li class="flex gap-4 items-start"><span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-on-primary text-sm font-bold">1</span><div><strong>Medellín</strong> — origen y regreso (bus o vuelo San Germán Express).</div></li>
+<li class="flex gap-4 items-start"><span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-on-primary text-sm font-bold">2</span><div><strong>Apartahotel San Diego</strong> — base en Puerto Berrío.</div></li>
+<li class="flex gap-4 items-start"><span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-on-primary text-sm font-bold">3</span><div><strong>Parque Principal y Parque Enrique Olaya Herrera</strong>.</div></li>
+<li class="flex gap-4 items-start"><span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-on-primary text-sm font-bold">4</span><div><strong>Estación del Ferrocarril de Antioquia</strong>.</div></li>
+<li class="flex gap-4 items-start"><span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-on-primary text-sm font-bold">5</span><div><strong>Puente Monumental</strong> — vista al Río Magdalena.</div></li>
+<li class="flex gap-4 items-start"><span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-on-primary text-sm font-bold">6</span><div><strong>Casa del río hotel</strong>, <strong>Café Río</strong>, <strong>Coyote Express</strong>, <strong>Piway</strong> — gastronomía local.</div></li>
+</ol>
+</div>
+<aside class="md:col-span-4">
+<div class="bg-surface-container-low p-6 rounded-2xl sticky top-24 space-y-4">
+<p class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Estimado por persona</p>
+<p class="text-3xl font-extrabold text-tertiary">$356.000 – $542.000</p>
+<p class="text-sm text-on-surface-variant">Incluye bus ida/vuelta, 2 noches, traslados internos, comidas (2D/2A/2C) y visitas indicadas. COP, aproximado.</p>
+<a href="mapa.html?ruta=1" class="block w-full text-center bg-primary text-on-primary py-3 rounded-full font-bold text-sm">Ver en mapa</a>
+<a href="cotizacion.html" class="block w-full text-center border-2 border-primary text-primary py-3 rounded-full font-bold text-sm">Tablas de cotización</a>
+</div>
+</aside>
+</div>
+</main>
+<footer class="site-footer text-white text-center py-8 text-sm">Magdalena Medio · Ruta 1</footer>
+</body>
+</html>

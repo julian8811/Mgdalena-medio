@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Directorio — Rutas ganaderas Magdalena Medio</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,800&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/theme.css"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = { darkMode: "class", theme: { extend: {
+  colors: {
+    primary: "#2b636a", "primary-dim": "#1c575d", "on-primary": "#d2faff",
+    secondary: "#4e5c73", "on-secondary": "#eef2ff", "secondary-container": "#cfddf8",
+    "on-secondary-container": "#414f65", tertiary: "#576100", "tertiary-container": "#e7f95e",
+    "on-tertiary-container": "#555d00", surface: "#fbf6ee", "on-surface": "#302f2a",
+    "on-surface-variant": "#5e5b55", "surface-container-low": "#f5f0e8", "surface-container-high": "#e7e2d8",
+    "surface-container-lowest": "#ffffff", "primary-container": "#aee7ed", "on-primary-container": "#1a565c",
+    outline: "#797770"
+  },
+  fontFamily: { headline: ["Plus Jakarta Sans","sans-serif"], body: ["Manrope","sans-serif"] }
+}}}
+</script>
+<style>
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+body { font-family: Manrope, sans-serif; }
+h1,h2,h3 { font-family: "Plus Jakarta Sans", sans-serif; }
+.tabla-cotizacion th, .tabla-cotizacion td { border: 1px solid #c5d9c8; padding: 10px 12px; text-align: left; }
+.tabla-cotizacion th { background: linear-gradient(135deg, #172539, #19555B); color: #fff; font-weight: 600; }
+.tabla-cotizacion tr:nth-child(even) { background: #f5faf5; }
+</style>
+<link rel="stylesheet" href="assets/css/informe-cards.css"/>
+<script defer src="assets/js/site.js"></script>
+</head>
+<body class="text-on-surface min-h-screen">
+
+<header class="site-header fixed top-0 w-full z-50 bg-[#fbf6ee]/85 backdrop-blur-md flex flex-wrap justify-between items-center gap-2 px-4 md:px-6 min-h-16 py-2">
+  <div class="flex items-center gap-3">
+    <button type="button" id="nav-toggle" class="md:hidden material-symbols-outlined text-[#19555B] p-2 rounded-full hover:bg-black/5" aria-label="Menú">menu</button>
+    <a href="index.html" class="brand-mark">
+      <span class="brand-title">Magdalena Medio</span>
+      <span class="brand-tagline">Turismo ganadero</span>
+    </a>
+  </div>
+  <nav id="nav-panel" class="hidden md:flex w-full md:w-auto flex-col md:flex-row gap-1 md:gap-6 text-sm font-bold text-primary pb-2 md:pb-0">
+    <a class="nav-link py-2" href="index.html">Inicio</a>
+    <a class="nav-link py-2" href="explorar-rutas.html">Explorar rutas</a>
+    <a class="nav-link py-2" href="mapa.html">Mapa</a>
+    <a class="nav-link py-2" href="directorio.html">Directorio</a>
+    <a class="nav-link py-2" href="cotizacion.html">Cotización</a>
+  </nav>
+</header>
+
+<main class="pt-24 pb-16 px-4 md:px-6 max-w-5xl mx-auto">
+  <p class="text-[10px] font-bold tracking-widest uppercase text-tertiary mb-3">Directorio</p>
+  <h1 class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight mb-4">Puntos de la ruta</h1>
+  <p class="text-on-surface-variant max-w-2xl mb-6">Descriptores, servicios y precios tentativos por establecimiento (informe Puerto Berrío – Maceo).</p>
+  <div class="mb-8">
+    <label class="sr-only" for="dir-search">Buscar</label>
+    <input id="dir-search" type="search" placeholder="Buscar por nombre, servicio o dirección…" class="w-full max-w-xl rounded-full border-0 border-b-2 border-primary bg-surface-container-low px-5 py-3 text-on-surface focus:ring-0 focus:border-primary-dim"/>
+  </div>
+  <div class="directorio-cards space-y-2">
+<div class="empresa-card" id="punto-Medellín-(origen-destino)">
+                <div class="nombre">Medellín (origen/destino)</div>
+                <span class="municipio">Origen</span>
+                <span class="badge badge-hospedaje">Origen</span>
+                <p class="descripcion">Punto de partida y llegada. Opción terrestre: bus (COONORTE, Rápido Ochoa, etc.). Opción aérea: vuelo Medellín–Puerto Berrío con San Germán Express (Grupo San Germán Express); 2 vuelos diarios lun–vie, sábados mañana; ~25 min. Variante: todas las rutas pueden hacerse con llegada/salida en vuelo.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Bus (aprox.): $35.000–$51.000/persona. Vuelo ida (aprox.): $280.000–$450.000/persona. Cotizar con operador.</p>
+                <p class="contacto"><strong>Dirección:</strong> Terminal / Olaya Herrera | <strong>Tel:</strong> — | <strong>Email:</strong> —</p>
+            </div>
+            <div class="empresa-card" id="punto-APARTAHOTEL-SAN-DIEGO">
+                <div class="nombre">APARTAHOTEL SAN DIEGO</div>
+                <span class="municipio">Hoteleria</span>
+                <span class="badge badge-hospedaje">Hoteleria</span>
+                <p class="descripcion">Alojamiento económico en Puerto Berrío, 36 habitaciones. Cinco cuadras del parque. Opción ideal para rutas de 3–4 días. Precio ref. $80.000–$120.000/noche. <strong>Servicios:</strong> Habitaciones, WiFi Gratis, Parking Gratis, Aire Acondicionado, Ventilador, TV Pantalla Plana, Baño Privado, Jardín, Terraza, Escritorio, Armario, Recepción 24H, Servicio de Habitaciones, Mascotas Permitidas.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Habitación: $90.000–$120.000/noche (aprox.). WiFi, parqueadero, aire acondicionado, recepción 24h.</p>
+                <p class="contacto"><strong>Dirección:</strong> CRA 4 NRO. 9-28 | <strong>Tel:</strong> 3156702180 | <strong>Email:</strong> williamsotoe@gmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-DIVAN-MACEO-S.A.S">
+                <div class="nombre">DIVAN MACEO S.A.S</div>
+                <span class="municipio">Hoteleria</span>
+                <span class="badge badge-hospedaje">Hoteleria</span>
+                <p class="descripcion">Hotel Ganadero en Maceo, CR 30 29-49. 22 habitaciones. Enfoque en experiencia ganadera. <strong>Servicios:</strong> Habitaciones, Aire Acondicionado, TV, Reservas Telefónicas.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Habitación (Hotel Ganadero): $100.000–$150.000/noche (aprox.). 22 habitaciones, experiencia ganadera.</p>
+                <p class="contacto"><strong>Dirección:</strong> CR 30 29-49 | <strong>Tel:</strong> 3128872479 | <strong>Email:</strong> diegovanegas72@hotmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-RESTAURANTE-BAR-EL-COYOTE-EXPR">
+                <div class="nombre">RESTAURANTE BAR EL COYOTE EXPRESS (CALLE 1 7-49)</div>
+                <span class="municipio">Restaurante / Café</span>
+                <span class="badge badge-restaurante">Restaurante / Café</span>
+                <p class="descripcion">Bar y restaurante en calle 1 7-49. Comidas y ambiente local. Cena en ruta. <strong>Servicios:</strong> Bar, Restaurante, Comida Típica, Pescado del Río, Bebidas, Ambiente Familiar, Reservas Telefónicas.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Almuerzo/cena: $15.000–$28.000 (aprox.). Comida típica, pescado del río, bar.</p>
+                <p class="contacto"><strong>Dirección:</strong> RESTAURANTE BAR EL COYOTE EXPRESS (CALLE 1 7-49) | <strong>Tel:</strong> 3168268236 | <strong>Email:</strong> viviana7960@hotmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-VILLA-SALOME">
+                <div class="nombre">VILLA SALOME</div>
+                <span class="municipio">Ganadería</span>
+                <span class="badge badge-ganaderia">Ganadería</span>
+                <p class="descripcion">Ganadería. Calle 51 N. 3-3. <strong>Servicios:</strong> Ganadería, Producción Pecuaria, Finca Ganadera, Comercialización.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Visita ganadera (Calle 51 N. 3-3): $60.000–$95.000/persona (aprox.).</p>
+                <p class="contacto"><strong>Dirección:</strong> (CALLE 51 N. 3-3) | <strong>Tel:</strong> 3154123737 | <strong>Email:</strong> bachuejo@hotmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-Casa-del-rio-hotel">
+                <div class="nombre">Casa del rio hotel</div>
+                <span class="municipio">Hoteleria</span>
+                <span class="badge badge-hospedaje">Hoteleria</span>
+                <p class="descripcion">Hotel boutique con experiencia de fauna y flora en predio. Dirección CRA. 6 # 3-29. Experiencia diferenciada. Precio ref. $180.000–$250.000/noche. <strong>Servicios:</strong> Habitaciones Boutique, Desayuno, Wifi, Aire Acondicionado, Vista al Río, Ambiente Acogedor, Reservas Telefónicas, Atención Personalizada.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Habitación boutique: $180.000–$250.000/noche (aprox.). Desayuno: $15.000–$22.000. WiFi, vista al río.</p>
+                <p class="contacto"><strong>Dirección:</strong> CRA. 6 # 3-29 | <strong>Tel:</strong> 311 2722145 | <strong>Email:</strong> casadelriohotelboutique@gmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-BIOCHICOAS-TURISMO">
+                <div class="nombre">BIOCHICOAS TURISMO</div>
+                <span class="municipio">Operadores Turísticos</span>
+                <span class="badge badge-operador">Operadores Turísticos</span>
+                <p class="descripcion">Operador de turismo de naturaleza. Ruta en lancha a Ciénaga de Barbacoas, guianza, fauna. Recomendado por Antioquia es Mágica. Tel. 3145659269 / 3148292307. <strong>Servicios:</strong> Ecoturismo, Educación Ambiental, Senderismo, Tours de Naturaleza, Observación de Fauna, Reservas, Guías Especializados.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Tour Ciénaga Barbacoas (lancha, guianza): $80.000–$150.000/persona (aprox.). Incluye navegación y guía.</p>
+                <p class="contacto"><strong>Dirección:</strong> CR 6 N 19 - 56 | <strong>Tel:</strong> 3145659269 | <strong>Email:</strong> asociacion_ambientalista@hotmail.es</p>
+            </div>
+            <div class="empresa-card" id="punto-LA-ALPINA-CENTRO-TURISTICO">
+                <div class="nombre">LA ALPINA CENTRO TURISTICO</div>
+                <span class="municipio">Operadores Turísticos</span>
+                <span class="badge badge-operador">Operadores Turísticos</span>
+                <p class="descripcion">Balneario y centro turístico en km 17 vía Medellín, vereda Las Flores. Desayuno, uso de instalaciones, naturaleza. Precio ref. $25.000–$45.000. <strong>Servicios:</strong> Balneario, Restaurante, Piscina, Zonas Verdes, Parqueadero, Bar, Eventos, Camping, Paseo de Olla, Reservas Telefónicas.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Entrada balneario: $25.000–$45.000 (aprox.). Desayuno/refrigero: $10.000–$15.000. Piscina, camping, paseo de olla.</p>
+                <p class="contacto"><strong>Dirección:</strong> KILOMETRO 17 VIA MEDELLIN VDA LAS FLORES SECTOR LA ALPINA | <strong>Tel:</strong> 3188113940 | <strong>Email:</strong> balneariolaalpina1987@gmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-DESCUBRELO-TOURS-AGENCIA-DE-VI">
+                <div class="nombre">DESCUBRELO TOURS AGENCIA DE VIAJES</div>
+                <span class="municipio">Operadores Turísticos</span>
+                <span class="badge badge-operador">Operadores Turísticos</span>
+                <p class="descripcion">Agencia operadora. Lancha a Ciénaga de Barbacoas, experiencias recomendadas. Contacto 3137454148. <strong>Servicios:</strong> Tours Ciénaga de Barbacoas, Guías Locales, Tours Regionales, Transporte Turístico, Navegación Río Magdalena, Reservas, Paquetes Turísticos, Ecoturismo.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Tour Ciénaga: $80.000–$150.000/persona (aprox.). Navegación Río Magdalena, paquetes bajo cotización.</p>
+                <p class="contacto"><strong>Dirección:</strong> CL 53 NO 6-36 | <strong>Tel:</strong> 3137454148 | <strong>Email:</strong> descubrelotours@gmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-HOTEL-AGROMACEO">
+                <div class="nombre">HOTEL AGROMACEO</div>
+                <span class="municipio">Hoteleria</span>
+                <span class="badge badge-hospedaje">Hoteleria</span>
+                <p class="descripcion">Hotel en Maceo, CRA 30 N. 29-12. Opción de alojamiento en ruta ganadera. <strong>Servicios:</strong> Habitaciones, Aire Acondicionado, Wifi, TV, Reservas Telefónicas.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Habitación: $100.000–$140.000/noche (aprox.). Aire acondicionado, WiFi, TV.</p>
+                <p class="contacto"><strong>Dirección:</strong> (CRA 30 N. 29-12 SEGUNDO PISO) | <strong>Tel:</strong> 3116260929 | <strong>Email:</strong> agromaceo@hotmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-COCOAN-S.A.S.">
+                <div class="nombre">COCOAN S.A.S.</div>
+                <span class="municipio">Ganadería</span>
+                <span class="badge badge-ganaderia">Ganadería</span>
+                <p class="descripcion">Ganadería en vereda La Unión. Experiencia de paisaje cultural ganadero. <strong>Servicios:</strong> Ganadería, Producción Agropecuaria, Comercialización, Inversiones.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Experiencia paisaje cultural ganadero (vereda La Unión): $65.000–$105.000/persona (aprox.).</p>
+                <p class="contacto"><strong>Dirección:</strong> vereda La Unión | <strong>Tel:</strong> 3136249266 | <strong>Email:</strong> cocoansas@gmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-HACIENDA-LA-BONITA">
+                <div class="nombre">HACIENDA LA BONITA</div>
+                <span class="municipio">Ganadería</span>
+                <span class="badge badge-ganaderia">Ganadería</span>
+                <p class="descripcion">Ganadería, estación Malena / vereda Aterrado. Oferta de experiencia ganadera. <strong>Servicios:</strong> Ganadería Bovina, Producción Pecuaria, Cría de Ganado, Comercialización.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Experiencia ganadera (estación Malena, vereda Aterrado): $70.000–$110.000/persona (aprox.).</p>
+                <p class="contacto"><strong>Dirección:</strong> estación Malena/  vereda aterrado | <strong>Tel:</strong> 3156702180 | <strong>Email:</strong> williamsotoe@gmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-CAFÉ-RIO">
+                <div class="nombre">CAFÉ RIO</div>
+                <span class="municipio">Restaurante / Café</span>
+                <span class="badge badge-restaurante">Restaurante / Café</span>
+                <p class="descripcion">Cafetería y restaurante en CR 54 con CL 5. Café, repostería, coworking. Menú local. Precio ref. según menú. <strong>Servicios:</strong> Café, Restaurante, Vista al Río, Desayunos, Almuerzos, Bebidas, Ambiente Ribereño, Reservas Telefónicas.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Desayuno: $12.000–$18.000; almuerzo: $18.000–$25.000; bebidas según menú (aprox.). Café, vista al río.</p>
+                <p class="contacto"><strong>Dirección:</strong> CR 54 CON CL 5 ESQ | <strong>Tel:</strong> 300 3320380 | <strong>Email:</strong> Katerincorreabustamante37@gmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-HACIENDA-EL-IMPERIO">
+                <div class="nombre">HACIENDA EL IMPERIO</div>
+                <span class="municipio">Ganadería</span>
+                <span class="badge badge-ganaderia">Ganadería</span>
+                <p class="descripcion">Ganadería en vereda Santa Bárbara sobre el Cañón del Río Alicante. <strong>Servicios:</strong> Ganadería Bovina, Producción Pecuaria, Ubicación Río Alicante, Agroturismo Potencial.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Visita/experiencia (Santa Bárbara, Cañón Río Alicante): $75.000–$115.000/persona (aprox.).</p>
+                <p class="contacto"><strong>Dirección:</strong> vereda Santa Barbara sobre el Cañón del Río Alicante | <strong>Tel:</strong> 3137912102 | <strong>Email:</strong> —</p>
+            </div>
+            <div class="empresa-card" id="punto-HOTEL-CAMPESTRE-CANDILEJAS">
+                <div class="nombre">HOTEL CAMPESTRE CANDILEJAS</div>
+                <span class="municipio">Hoteleria</span>
+                <span class="badge badge-hospedaje">Hoteleria</span>
+                <p class="descripcion">Hotel campestre en vía Medellín. Balneario y desayuno. Coordinar con operador para paquete. Km 17 zona. <strong>Servicios:</strong> Cabañas, Restaurante Campestre, Piscina, Bar, Lago de Pesca, Mini Granja, Sendero Ecológico, Parqueadero, Paseos a Caballo, Canotaje, Eventos, Reservas Online.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Cabañas: $120.000–$180.000/noche (aprox.). Restaurante: almuerzo $18.000–$28.000. Piscina, lago de pesca, senderismo.</p>
+                <p class="contacto"><strong>Dirección:</strong> vía Medellin | <strong>Tel:</strong> 3235691920 | <strong>Email:</strong> ago-813@hotmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-CONECTA-NATIVA-S.A.S">
+                <div class="nombre">CONECTA NATIVA S.A.S</div>
+                <span class="municipio">Operadores Turísticos</span>
+                <span class="badge badge-operador">Operadores Turísticos</span>
+                <p class="descripcion">Operador de experiencias en Puerto Berrío y Maceo. Recorrido histórico: parques, Brigada, Carrera 1.ª. Pasadía desde $59.000. <strong>Servicios:</strong> Turismo de Naturaleza, Ecoturismo, Tours Locales, Experiencias Naturales, Reservas.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Pasadía recorrido histórico (parques, Brigada, Carrera 1.ª): $59.000–$120.000/persona (aprox.).</p>
+                <p class="contacto"><strong>Dirección:</strong> Puerto Berrío | <strong>Tel:</strong> 3235691920 | <strong>Email:</strong> ago-813@hotmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-SOCIEDAD-COMERCIALIZADORA-DBF-">
+                <div class="nombre">SOCIEDAD COMERCIALIZADORA DBF S.A.S</div>
+                <span class="municipio">Ganadería</span>
+                <span class="badge badge-ganaderia">Ganadería</span>
+                <p class="descripcion">Hacienda La Tagua. Ganadería. <strong>Servicios:</strong> Comercialización Ganadera, Hacienda La Tagua, Producción Bovina, Inversiones Agropecuarias.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Hacienda La Tagua. Experiencia ganadera: $70.000–$110.000/persona (aprox.).</p>
+                <p class="contacto"><strong>Dirección:</strong> HACIENDA LA TAGUA | <strong>Tel:</strong> 3176570470 | <strong>Email:</strong> comercializadoradbf@gmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-AGROPECUARIA-PARA-SIEMPRE-SAS">
+                <div class="nombre">AGROPECUARIA PARA SIEMPRE SAS</div>
+                <span class="municipio">Ganadería</span>
+                <span class="badge badge-ganaderia">Ganadería</span>
+                <p class="descripcion">Finca ganadera. Experiencia de ordeño, caballo, talabartería. Contacto 3105032243. <strong>Servicios:</strong> Producción Agropecuaria, Ganadería, Agricultura, Comercialización.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Experiencia ganadera (ordeño, caballo, talabartería): $80.000–$120.000/persona (aprox.).</p>
+                <p class="contacto"><strong>Dirección:</strong> Puerto Berrío | <strong>Tel:</strong> 310-5032243 | <strong>Email:</strong> agropecuariaparasiempre1@gmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-LILLER-INVERSIONES-S.A.S.">
+                <div class="nombre">LILLER INVERSIONES S.A.S.</div>
+                <span class="municipio">Ganadería</span>
+                <span class="badge badge-ganaderia">Ganadería</span>
+                <p class="descripcion">Finca ganadera en Puerto Berrío. Parte de la oferta de experiencia ganadera. <strong>Servicios:</strong> Inversiones Ganaderas, Producción Pecuaria, Comercialización, Gestión Empresarial.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Experiencia ganadera en finca: $70.000–$110.000/persona (aprox.). Cotizar con operador.</p>
+                <p class="contacto"><strong>Dirección:</strong> Puerto Berrío | <strong>Tel:</strong> 3108317438 | <strong>Email:</strong> lillerinversionessas68@hotmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-INVERSIONES-JARALZA-S.A.S.">
+                <div class="nombre">INVERSIONES JARALZA S.A.S.</div>
+                <span class="municipio">Ganadería</span>
+                <span class="badge badge-ganaderia">Ganadería</span>
+                <p class="descripcion">Finca ganadera. Experiencia ganadera D5. <strong>Servicios:</strong> Ganadería, Inversiones Agropecuarias, Comercialización, Hacienda La Concha.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Visita/experiencia ganadera: $60.000–$100.000/persona (aprox.). Cotizar con finca.</p>
+                <p class="contacto"><strong>Dirección:</strong> Puerto Berrío | <strong>Tel:</strong> 3113188542 | <strong>Email:</strong> haciendalaconcha@gmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-HACIENDA-GUAYACANES">
+                <div class="nombre">HACIENDA GUAYACANES</div>
+                <span class="municipio">Ganadería</span>
+                <span class="badge badge-ganaderia">Ganadería</span>
+                <p class="descripcion">Ganadería en Puerto Berrío. <strong>Servicios:</strong> Ganadería Bovina, Cría de Ganado, Comercialización, Producción Lechera, Agroturismo.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Experiencia ganadera en Puerto Berrío: $70.000–$110.000/persona (aprox.).</p>
+                <p class="contacto"><strong>Dirección:</strong> Puerto Berrío | <strong>Tel:</strong> 3116341952 | <strong>Email:</strong> —</p>
+            </div>
+            <div class="empresa-card" id="punto-INVERSIONES-AGROPECUARIAS-GANA">
+                <div class="nombre">INVERSIONES AGROPECUARIAS GANADOS Y GANADOS S.A.S. / SAN JUAN DE BEDOUTH</div>
+                <span class="municipio">Ganadería</span>
+                <span class="badge badge-ganaderia">Ganadería</span>
+                <p class="descripcion">Finca San Juan de Bedout. Experiencia ganadera: desayuno con productor, recorrido entre Beneficia y Benerol. Contacto 3206758771. <strong>Servicios:</strong> Inversiones Agropecuarias, Ganadería Bovina, Comercialización, Hacienda San Juan de Bedouth, Producción Pecuaria.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Experiencia ganadera (desayuno con productor, recorrido Beneficia–Benerol): $50.000–$80.000/persona (aprox.).</p>
+                <p class="contacto"><strong>Dirección:</strong> Puerto Berrío | <strong>Tel:</strong> 3206758771 | <strong>Email:</strong> contadoragyg@gmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-PAMPAS">
+                <div class="nombre">PAMPAS</div>
+                <span class="municipio">Ganadería</span>
+                <span class="badge badge-ganaderia">Ganadería</span>
+                <p class="descripcion">Ganadería. Km 6 vía Puerto Berrío–Medellín. <strong>Servicios:</strong> Ganadería Bovina, Cría de Ganado, Comercialización, Producción Pecuaria.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Visita ganadera (km 6 vía PB–Medellín): $65.000–$100.000/persona (aprox.).</p>
+                <p class="contacto"><strong>Dirección:</strong> Kilómetro 6 vía Puerto Berrio-Medellín | <strong>Tel:</strong> 3154424803 | <strong>Email:</strong> —</p>
+            </div>
+            <div class="empresa-card" id="punto-Hotel-Malecón">
+                <div class="nombre">Hotel Malecón</div>
+                <span class="municipio">Hoteleria</span>
+                <span class="badge badge-hospedaje">Hoteleria</span>
+                <p class="descripcion">Hostal económico en CARRERA 4 52-15. Opción para viajeros con presupuesto ajustado. <strong>Servicios:</strong> Habitaciones, WiFi Gratis, Aire Acondicionado, TV Pantalla Plana, Vista al Río, Terraza, Bar, Jacuzzi, Minibar, Baño Privado, Recepción 24H, Servicio de Habitaciones, Lavandería, Traslado Aeropuerto, Mascotas Permitidas, Habitaciones No Fumadores, Plancha y Plancha Pantalones, Reservas Online.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Habitación: $70.000–$95.000/noche (aprox.). Vista al río, bar, jacuzzi. Traslado aeropuerto: $25.000–$40.000.</p>
+                <p class="contacto"><strong>Dirección:</strong> CARRERA 4 52 15 | <strong>Tel:</strong> 3108329297 | <strong>Email:</strong> marcelopits81@hotmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-BAR-Y-COMIDAS-RAPIDAS-PIWAY">
+                <div class="nombre">BAR Y COMIDAS RAPIDAS PIWAY</div>
+                <span class="municipio">Restaurante / Café</span>
+                <span class="badge badge-restaurante">Restaurante / Café</span>
+                <p class="descripcion">Comidas rápidas y bar en CL 52 NRO. 5-32. Hamburguesas, eventos. Cena D1/D6. <strong>Servicios:</strong> Bar, Comidas Rápidas, Hamburguesas, Perros Calientes, Bebidas, Servicio a Domicilio.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Combo hamburguesa/perro: $12.000–$18.000; bebidas según menú (aprox.). Servicio a domicilio.</p>
+                <p class="contacto"><strong>Dirección:</strong> CL 52 NRO. 5-32 | <strong>Tel:</strong> 3124325556 | <strong>Email:</strong> piwaypiway4@gmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-AGENCIA-DE-VIAJES-PALM@BEACH">
+                <div class="nombre">AGENCIA DE VIAJES PALM@BEACH</div>
+                <span class="municipio">Operadores Turísticos</span>
+                <span class="badge badge-operador">Operadores Turísticos</span>
+                <p class="descripcion">Agencia receptiva y emisiva, RNT 99203. Paquetes y recorrido histórico. Contacto 3046683314. <strong>Servicios:</strong> Venta de Tiquetes, Paquetes Turísticos, Asesoría de Viajes, Reservas Hoteleras, Tours Nacionales, Tours Internacionales.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Pasadía histórico: $59.000–$120.000 (aprox.). Paquetes Antioquia desde $390.000. RNT 99203.</p>
+                <p class="contacto"><strong>Dirección:</strong> CRA 7 N 46-02 | <strong>Tel:</strong> 3046683314 | <strong>Email:</strong> sajonero14@gmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-Ecorrefugio-Alicante">
+                <div class="nombre">Ecorrefugio Alicante</div>
+                <span class="municipio">Operadores Turísticos</span>
+                <span class="badge badge-operador">Operadores Turísticos</span>
+                <p class="descripcion">Refugio en Santa Bárbara/Maceo. Cena campesina, tertulia entre mitos y culturas, alojamiento rural. Experiencia de noche. Tel. 3004833179. <strong>Servicios:</strong> Alojamiento Rústico, Ecoturismo, Senderismo, Observación de Aves, Río Alicante, Cañón del Río Alicante, Reservas, Cabañas, Naturaleza.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Noche con cena y tertulia: $150.000–$220.000/persona (aprox.). Alojamiento rústico, senderismo, cena campesina.</p>
+                <p class="contacto"><strong>Dirección:</strong> Santa Barbara / Maceo | <strong>Tel:</strong> 3004833179 | <strong>Email:</strong> ecorrefugio@gmail.com</p>
+            </div>
+            <div class="empresa-card" id="punto-COLBUFALA">
+                <div class="nombre">COLBUFALA</div>
+                <span class="municipio">Restaurante / Café</span>
+                <span class="badge badge-restaurante">Restaurante / Café</span>
+                <p class="descripcion">Gastronomía bufalina. Productos de búfalo y cocina local. Puerto Berrío. <strong>Servicios:</strong> Productos de Búfalo, Quesos, Leche de Búfala, Derivados Lácteos, Producción Artesanal, Venta Directa.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Productos de búfalo/quesos: según producto. Menú restaurante: $15.000–$25.000 (aprox.). Leche de búfala, derivados.</p>
+                <p class="contacto"><strong>Dirección:</strong> Puerto Berrío | <strong>Tel:</strong> 3124328260 | <strong>Email:</strong> —</p>
+            </div>
+            <div class="empresa-card" id="punto-Parque-Principal-y-Parque-Enri">
+                <div class="nombre">Parque Principal y Parque Enrique Olaya Herrera</div>
+                <span class="municipio">Atractivo</span>
+                <span class="badge badge-atractivo">Atractivo</span>
+                <p class="descripcion">Parques en zona céntrica. Exposición fotográfica permanente, monumento Ferrocarril (locomotora No 50), Palacio Municipal. Visita libre ($0) o con guía: $20.000–$40.000/persona (Conecta Nativa / Palma Beach).</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Visita libre: $0. Con guía (Conecta Nativa / Palma Beach): $20.000–$40.000/persona (aprox.).</p>
+                <p class="contacto"><strong>Dirección:</strong> Centro Puerto Berrío | <strong>Tel:</strong> PIT 315 392 2773 | <strong>Email:</strong> —</p>
+            </div>
+            <div class="empresa-card" id="punto-Estación-del-Ferrocarril-de-An">
+                <div class="nombre">Estación del Ferrocarril de Antioquia</div>
+                <span class="municipio">Atractivo</span>
+                <span class="badge badge-atractivo">Atractivo</span>
+                <p class="descripcion">Conjunto patrimonial Estación Ferrocarril. Carrera 1.ª, cacao Altos de Buenos Aires. Pasadía desde $59.000 (aprox.).</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Visita libre o con pasadía. Pasadía Carrera 1.ª desde $59.000 (aprox.).</p>
+                <p class="contacto"><strong>Dirección:</strong> Carrera 1.ª, Puerto Berrío | <strong>Tel:</strong> — | <strong>Email:</strong> —</p>
+            </div>
+            <div class="empresa-card" id="punto-Puente-Monumental-(vista-Río-M">
+                <div class="nombre">Puente Monumental (vista Río Magdalena)</div>
+                <span class="municipio">Atractivo</span>
+                <span class="badge badge-atractivo">Atractivo</span>
+                <p class="descripcion">Mirador y vista al Río Magdalena. Visita libre o incluido en recorrido histórico ($59.000–$120.000 pasadía).</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Visita libre: $0. Incluido en recorrido histórico: $59.000–$120.000 pasadía (aprox.).</p>
+                <p class="contacto"><strong>Dirección:</strong> Puerto Berrío | <strong>Tel:</strong> — | <strong>Email:</strong> —</p>
+            </div>
+            <div class="empresa-card" id="punto-Casa-Museo-Hotel-Magdalena-(Br">
+                <div class="nombre">Casa Museo Hotel Magdalena (Brigada)</div>
+                <span class="municipio">Atractivo</span>
+                <span class="badge badge-atractivo">Atractivo</span>
+                <p class="descripcion">Desde 1883, Décimo Cuarta Brigada. Visita con coordinación previa (PIT 315 392 2773). Incluida en pasadía histórico: $59.000–$120.000.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Visita con coordinación previa (PIT 315 392 2773). Incluida en pasadía histórico: $59.000–$120.000 (aprox.).</p>
+                <p class="contacto"><strong>Dirección:</strong> Décimo Cuarta Brigada, Puerto Berrío | <strong>Tel:</strong> PIT 315 392 2773 | <strong>Email:</strong> —</p>
+            </div>
+            <div class="empresa-card" id="punto-Ciénaga-de-Barbacoas">
+                <div class="nombre">Ciénaga de Barbacoas</div>
+                <span class="municipio">Atractivo</span>
+                <span class="badge badge-atractivo">Atractivo</span>
+                <p class="descripcion">Segunda ciénaga más grande del país. Tour en lancha (Biochicoas/Descúbrelo): $80.000–$150.000/persona. Navegación, guianza, fauna.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Tour en lancha (Biochicoas/Descúbrelo): $80.000–$150.000/persona (aprox.). Incluye navegación y guianza.</p>
+                <p class="contacto"><strong>Dirección:</strong> Río Magdalena, lancha desde puerto PB | <strong>Tel:</strong> Biochicoas 3145659269 / Descúbrelo 3137454148 | <strong>Email:</strong> —</p>
+            </div>
+            <div class="empresa-card" id="punto-Cañón-del-Río-Alicante">
+                <div class="nombre">Cañón del Río Alicante</div>
+                <span class="municipio">Atractivo</span>
+                <span class="badge badge-atractivo">Atractivo</span>
+                <p class="descripcion">Reserva, senderismo, cavernas, bosques. Puerto Berrío/Maceo/Yolombó. Experiencia: $40.000–$70.000/persona + guía (aprox.). Conecta Nativa 3235691920.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Senderismo/experiencia: $40.000–$70.000/persona ida + guía (aprox.). Coordinar Conecta Nativa 3235691920.</p>
+                <p class="contacto"><strong>Dirección:</strong> Puerto Berrío / Maceo / Yolombó | <strong>Tel:</strong> Conecta Nativa 3235691920 | <strong>Email:</strong> —</p>
+            </div>
+            <div class="empresa-card" id="punto-Ciénaga-de-Chiqueros">
+                <div class="nombre">Ciénaga de Chiqueros</div>
+                <span class="municipio">Atractivo</span>
+                <span class="badge badge-atractivo">Atractivo</span>
+                <p class="descripcion">Más de 6.500 ha, zona protegida. ~1 h del casco urbano. Cotizar con operador (ref. $50.000–$90.000/persona).</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Visita/recorrido: cotizar con operador. Ref. $50.000–$90.000/persona (aprox.).</p>
+                <p class="contacto"><strong>Dirección:</strong> ~1 h del casco urbano PB | <strong>Tel:</strong> — | <strong>Email:</strong> —</p>
+            </div>
+            <div class="empresa-card" id="punto-Puerto-de-lanchas-(Río-Magdale">
+                <div class="nombre">Puerto de lanchas (Río Magdalena)</div>
+                <span class="municipio">Atractivo</span>
+                <span class="badge badge-atractivo">Atractivo</span>
+                <p class="descripcion">Punto de embarque para recorridos fluviales. Tours a Ciénaga desde $80.000/persona.</p>
+                <p class="contacto"><strong>Precios aproximados (tentativos):</strong> Embarque para tours. Sin costo de acceso; tours a Ciénaga desde $80.000/persona (aprox.).</p>
+                <p class="contacto"><strong>Dirección:</strong> Puerto Berrío | <strong>Tel:</strong> — | <strong>Email:</strong> —</p>
+            </div>
+        </section>
+  </div>
+</main>
+
+<footer class="site-footer text-white text-center py-10 mt-16 px-4">
+  <p class="opacity-90 text-sm">Rutas turísticas Puerto Berrío y Maceo — Magdalena Medio · Paisaje cultural ganadero</p>
+  <p class="opacity-60 text-xs mt-2">Precios referenciales; confirmar con cada proveedor.</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var search = document.getElementById('dir-search');
+  if (!search) return;
+  search.addEventListener('input', function () {
+    var q = search.value.toLowerCase().trim();
+    document.querySelectorAll('.empresa-card').forEach(function (card) {
+      card.style.display = !q || card.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+});
+</script>
+</body></html>

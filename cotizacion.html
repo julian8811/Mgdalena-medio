@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cotización — Rutas Puerto Berrío y Maceo</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,800&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/theme.css"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = { darkMode: "class", theme: { extend: {
+  colors: {
+    primary: "#2b636a", "primary-dim": "#1c575d", "on-primary": "#d2faff",
+    secondary: "#4e5c73", "on-secondary": "#eef2ff", "secondary-container": "#cfddf8",
+    "on-secondary-container": "#414f65", tertiary: "#576100", "tertiary-container": "#e7f95e",
+    "on-tertiary-container": "#555d00", surface: "#fbf6ee", "on-surface": "#302f2a",
+    "on-surface-variant": "#5e5b55", "surface-container-low": "#f5f0e8", "surface-container-high": "#e7e2d8",
+    "surface-container-lowest": "#ffffff", "primary-container": "#aee7ed", "on-primary-container": "#1a565c",
+    outline: "#797770"
+  },
+  fontFamily: { headline: ["Plus Jakarta Sans","sans-serif"], body: ["Manrope","sans-serif"] }
+}}}
+</script>
+<style>
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+body { font-family: Manrope, sans-serif; }
+h1,h2,h3 { font-family: "Plus Jakarta Sans", sans-serif; }
+.tabla-cotizacion th, .tabla-cotizacion td { border: 1px solid #c5d9c8; padding: 10px 12px; text-align: left; }
+.tabla-cotizacion th { background: linear-gradient(135deg, #172539, #19555B); color: #fff; font-weight: 600; }
+.tabla-cotizacion tr:nth-child(even) { background: #f5faf5; }
+</style>
+<link rel="stylesheet" href="assets/css/informe-cards.css"/>
+<script defer src="assets/js/site.js"></script>
+</head>
+<body class="text-on-surface min-h-screen">
+
+<header class="site-header fixed top-0 w-full z-50 bg-[#fbf6ee]/85 backdrop-blur-md flex flex-wrap justify-between items-center gap-2 px-4 md:px-6 min-h-16 py-2">
+  <div class="flex items-center gap-3">
+    <button type="button" id="nav-toggle" class="md:hidden material-symbols-outlined text-[#19555B] p-2 rounded-full hover:bg-black/5" aria-label="Menú">menu</button>
+    <a href="index.html" class="brand-mark">
+      <span class="brand-title">Magdalena Medio</span>
+      <span class="brand-tagline">Turismo ganadero</span>
+    </a>
+  </div>
+  <nav id="nav-panel" class="hidden md:flex w-full md:w-auto flex-col md:flex-row gap-1 md:gap-6 text-sm font-bold text-primary pb-2 md:pb-0">
+    <a class="nav-link py-2" href="index.html">Inicio</a>
+    <a class="nav-link py-2" href="explorar-rutas.html">Explorar rutas</a>
+    <a class="nav-link py-2" href="mapa.html">Mapa</a>
+    <a class="nav-link py-2" href="directorio.html">Directorio</a>
+    <a class="nav-link py-2" href="cotizacion.html">Cotización</a>
+  </nav>
+</header>
+
+<main class="pt-24 pb-16 px-4 md:px-6 max-w-6xl mx-auto">
+  <p class="text-[10px] font-bold tracking-widest uppercase text-tertiary mb-3">Cotización</p>
+  <h1 class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight mb-4">Discriminada por rubros</h1>
+  <p class="text-on-surface-variant max-w-3xl mb-10">Información tomada del documento de cotización del informe. Valores en COP; confirmar con cada proveedor.</p>
+  <div class="cotizacion-content space-y-8">
+<h2>4. Cotización por ruta – Discriminada por rubros</h2>
+            <p>Información de cotización tomada del documento Ruta Turística Cotizada (Puerto Berrío y Maceo). Precios de referencia en COP; confirmar con cada proveedor.</p>
+            <div class="cotizacion-section"><h3>Cotización por rubros</h3>
+                <h4 class="text-lg font-bold text-[#6b4226] mt-6 mb-2 font-headline">Transporte</h4>
+<table class="tabla-cotizacion w-full text-sm border-collapse my-4 rounded-xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.06)]"><thead><tr><th>Concepto</th><th>Operador / Opción</th><th>Contacto / Web</th><th>Precio referencia</th><th>Observaciones</th></tr></thead><tbody><tr><td>Bus Medellín–Puerto Berrío</td><td>COONORTE</td><td>coonorte.com.co</td><td>$38.000 aprox.</td><td>Salidas 04:15–19:00</td></tr><tr><td>Bus Medellín–Puerto Berrío</td><td>Rápido Ochoa / Brasilia / Copetran</td><td>Terminal / Pinbus</td><td>$35.000–$51.000</td><td>2h30–3h40</td></tr><tr><td>Vuelo regional</td><td>Aeropuerto Puerto Berrío</td><td>Consultar aerolíneas</td><td>Cotizar</td><td>Charter / regional</td></tr><tr><td>Traslados locales</td><td>Operadores turísticos</td><td>Biochicoas, Descúbrelo, etc.</td><td>Cotizar</td><td>Incluir en paquete</td></tr></tbody></table>                <h4 class="text-lg font-bold text-[#6b4226] mt-6 mb-2 font-headline">Alojamiento por día</h4>
+<table class="tabla-cotizacion w-full text-sm border-collapse my-4 rounded-xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.06)]"><thead><tr><th>Día(s) sugerido</th><th>Establecimiento</th><th>Municipio</th><th>Contacto</th><th>Precio ref.</th></tr></thead><tbody><tr><td>1, 2, 3</td><td>Casa del Río Hotel Boutique</td><td>Puerto Berrío</td><td>311 2722145</td><td>Cotizar</td></tr><tr><td>1, 2, 3</td><td>Apartahotel San Diego</td><td>Puerto Berrío</td><td>3156702180</td><td>Económico</td></tr><tr><td>2</td><td>Hotel Campestre Candilejas</td><td>Puerto Berrío</td><td>3235691920</td><td>Cotizar</td></tr><tr><td>4 (noche)</td><td>Ecorrefugio Alicante</td><td>Santa Bárbara/Maceo</td><td>3004833179</td><td>Cotizar</td></tr><tr><td>5, 6</td><td>Hotel Ganadero Maceo / Agromaceo</td><td>Maceo</td><td>3128872479 / 3116260929</td><td>Cotizar</td></tr></tbody></table>                <h4 class="text-lg font-bold text-[#6b4226] mt-6 mb-2 font-headline">Restaurantes y comidas</h4>
+<table class="tabla-cotizacion w-full text-sm border-collapse my-4 rounded-xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.06)]"><thead><tr><th>Comida / Momento</th><th>Establecimiento</th><th>Contacto</th><th>Servicios</th><th>Precio ref.</th></tr></thead><tbody><tr><td>Desayuno D2/D3</td><td>LA ALPINA / Candilejas</td><td>3188113940 / 3235691920</td><td>Balneario + desayuno</td><td>Cotizar</td></tr><tr><td>Almuerzo D2/D3</td><td>Café Río / Colbufala / Coyote</td><td>3003320380 / 3124328260 / 3168268236</td><td>Menú local</td><td>Según menú</td></tr><tr><td>Cena D1/D6</td><td>Piway / Coyote Express</td><td>3124325556 / 3168268236</td><td>Comidas rápidas, bar</td><td>Según menú</td></tr><tr><td>Cena D4</td><td>Ecorrefugio (cena campesina)</td><td>3004833179</td><td>Incluida en paquete</td><td>Cotizar paquete</td></tr><tr><td>Almuerzo D5</td><td>Finca ganadera</td><td>Operador / finca</td><td>Almuerzo típico ganadero</td><td>Cotizar</td></tr></tbody></table>                <h4 class="text-lg font-bold text-[#6b4226] mt-6 mb-2 font-headline">Operadores y experiencias</h4>
+<table class="tabla-cotizacion w-full text-sm border-collapse my-4 rounded-xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.06)]"><thead><tr><th>Experiencia / Día</th><th>Operador</th><th>Contacto</th><th>Servicios</th><th>Precio ref.</th></tr></thead><tbody><tr><td>Balneario D2/D3</td><td>LA ALPINA Centro Turístico</td><td>3188113940</td><td>Balneario km 17 vía Medellín</td><td>Cotizar</td></tr><tr><td>Ciénaga Barbacoas / Puertos D3</td><td>Biochicoas Turismo</td><td>3145659269 / 3148292307</td><td>Lancha, guianza, naturaleza</td><td>Cotizar</td></tr><tr><td>Ciénaga Barbacoas D3</td><td>Descúbrelo Tours</td><td>3137454148</td><td>Lancha (recom. Antioquia es Mágica)</td><td>Cotizar</td></tr><tr><td>Recorrido histórico D3</td><td>Conecta Nativa / Palma Beach</td><td>3235691920 / 3046683314</td><td>Parques, Brigada, Carrera 1.ª</td><td>Cotizar</td></tr><tr><td>Noche D4</td><td>Ecorrefugio Alicante</td><td>3004833179</td><td>Alojamiento + cena + tertulia</td><td>Cotizar</td></tr><tr><td>Experiencia ganadera D5</td><td>Fincas (Agropecuaria Para Siempre, etc.)</td><td>3105032243 y operadores</td><td>Ordeño, caballo, talabartería</td><td>Cotizar</td></tr></tbody></table>            </div>
+            <div class="cotizacion-section"><h3>Transporte interno entre atractivos</h3>
+<table class="tabla-cotizacion w-full text-sm border-collapse my-4 rounded-xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.06)]"><thead><tr><th>Tramo</th><th>Origen – Destino</th><th>Modalidad</th><th>Precio ref. (COP)</th><th>Observaciones</th></tr></thead><tbody><tr><td>D1</td><td>Aeropuerto / Terminal – Hotel Puerto Berrío</td><td>Taxi / traslado operador</td><td>$15.000 – $25.000</td><td>Por vehículo o por persona según operador</td></tr><tr><td>D2</td><td>Hotel PB – LA ALPINA (km 17 vía Medellín)</td><td>Vehiculo / operador</td><td>$25.000 – $45.000 ida</td><td>Incluido en paquete balneario con algunos operadores</td></tr><tr><td>D2</td><td>Hotel PB – Hotel Candilejas (vía Medellín)</td><td>Vehiculo / operador</td><td>$30.000 – $50.000 ida</td><td>Coordinable con Candilejas</td></tr><tr><td>D3</td><td>Hotel PB – Parque Principal / Brigada / Estación</td><td>A pie / mototaxi</td><td>$5.000 – $15.000</td><td>Zona céntrica; mototaxi cortos</td></tr><tr><td>D3</td><td>Puerto PB – Ciénaga Barbacoas (lancha)</td><td>Lancha (Biochicoas / Descúbrelo)</td><td>Incluido en tour</td><td>Precio tour aprox. $80.000 – $150.000 pp</td></tr><tr><td>D3</td><td>PB – Cañón Río Alicante</td><td>Vehiculo + guía</td><td>$40.000 – $70.000 ida</td><td>Coordinar con Conecta Nativa / Palma Beach</td></tr><tr><td>D4</td><td>Puerto Berrío – Ecorrefugio Alicante (Maceo/Santa Bárbara)</td><td>Vehiculo / operador</td><td>$80.000 – $120.000 ida</td><td>Incluido en paquete noche Ecorrefugio según opción</td></tr><tr><td>D5</td><td>Ecorrefugio – Fincas ganaderas (Maceo)</td><td>Vehiculo operador / finca</td><td>$30.000 – $50.000</td><td>Suele incluirse en experiencia ganadera</td></tr><tr><td>D5</td><td>Maceo – Puerto Berrío (regreso)</td><td>Bus / vehiculo</td><td>$35.000 – $55.000</td><td>Compartido o privado</td></tr><tr><td>D6</td><td>Hotel PB – San Juan de Bedout</td><td>Vehiculo operador / finca</td><td>$50.000 – $80.000 ida</td><td>Coordinar con Inversiones Agropeciarias 3206758771</td></tr></tbody></table>            </div>
+            <div class="cotizacion-section"><h3>Cotización por paquete / ruta</h3>
+                <h4 class="text-lg font-bold text-[#6b4226] mt-6 mb-2 font-headline">Paquete 1 – Puerto Berrío esencial (3 días / 2 noches)</h4>
+<table class="tabla-cotizacion w-full text-sm border-collapse my-4 rounded-xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.06)]"><thead><tr><th>Concepto</th><th>Incluye</th><th>Precio ref. (COP)</th></tr></thead><tbody><tr><td>Transporte ida</td><td>Bus Medellín – Puerto Berrío (ida)</td><td>$38.000 – $51.000</td></tr><tr><td>Transporte vuelta</td><td>Bus Puerto Berrío – Medellín (vuelta)</td><td>$38.000 – $51.000</td></tr><tr><td>Traslados internos</td><td>Terminal – hotel; hotel – parque/centro (2 días)</td><td>$30.000 – $50.000 total</td></tr><tr><td>Alojamiento</td><td>2 noches (Apartahotel San Diego o similar económico)</td><td>$160.000 – $240.000</td></tr><tr><td>Comidas</td><td>2 desayunos, 2 almuerzos, 2 cenas (según menú en Café Río, Piway, Coyote)</td><td>$90.000 – $150.000</td></tr><tr><td>Actividades</td><td>Recorrido Parque Principal, Estación Ferrocarril, Puente Monumental (libre o guía local)</td><td>$0 – $40.000</td></tr><tr><td>TOTAL por persona (ref.)</td><td>—</td><td>$356.000 – $542.000</td></tr></tbody></table>                <h4 class="text-lg font-bold text-[#6b4226] mt-6 mb-2 font-headline">Paquete 2 – Balneario y Ciénaga (4 días / 3 noches)</h4>
+<table class="tabla-cotizacion w-full text-sm border-collapse my-4 rounded-xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.06)]"><thead><tr><th>Concepto</th><th>Incluye</th><th>Precio ref. (COP)</th></tr></thead><tbody><tr><td>Transporte ida y vuelta</td><td>Bus Medellín – PB – Medellín</td><td>$76.000 – $102.000</td></tr><tr><td>Traslados internos</td><td>Hotel – LA ALPINA/Candilejas; hotel – puerto lanchas; centro</td><td>$60.000 – $100.000</td></tr><tr><td>Alojamiento</td><td>3 noches (San Diego o Candilejas 1 noche)</td><td>$240.000 – $380.000</td></tr><tr><td>Comidas</td><td>3 D, 3 A, 3 C (hotel + restaurantes locales)</td><td>$130.000 – $220.000</td></tr><tr><td>Balneario</td><td>Entrada + uso instalaciones LA ALPINA o Candilejas</td><td>$25.000 – $45.000</td></tr><tr><td>Tour Ciénaga Barbacoas</td><td>Lancha, guianza, (opcional almuerzo)</td><td>$80.000 – $150.000</td></tr><tr><td>TOTAL por persona (ref.)</td><td>—</td><td>$596.000 – $997.000</td></tr></tbody></table>                <h4 class="text-lg font-bold text-[#6b4226] mt-6 mb-2 font-headline">Paquete 3 – Recorrido histórico y naturaleza (4 días / 3 noches)</h4>
+<table class="tabla-cotizacion w-full text-sm border-collapse my-4 rounded-xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.06)]"><thead><tr><th>Concepto</th><th>Incluye</th><th>Precio ref. (COP)</th></tr></thead><tbody><tr><td>Transporte ida y vuelta</td><td>Bus Medellín – PB – Medellín</td><td>$76.000 – $102.000</td></tr><tr><td>Traslados internos</td><td>Recorrido histórico, puerto–Ciénaga, centro</td><td>$50.000 – $90.000</td></tr><tr><td>Alojamiento</td><td>3 noches (San Diego / Casa del Río)</td><td>$240.000 – $380.000</td></tr><tr><td>Comidas</td><td>3 D, 3 A, 3 C</td><td>$130.000 – $220.000</td></tr><tr><td>Recorrido histórico D3</td><td>Pasadía parques, Brigada, Estación (Conecta Nativa / Palma)</td><td>$59.000 – $120.000</td></tr><tr><td>Tour Ciénaga Barbacoas</td><td>Lancha + guianza (Descúbrelo / Biochicoas)</td><td>$80.000 – $150.000</td></tr><tr><td>TOTAL por persona (ref.)</td><td>—</td><td>$635.000 – $1.062.000</td></tr></tbody></table>                <h4 class="text-lg font-bold text-[#6b4226] mt-6 mb-2 font-headline">Paquete 4 – Experiencia ganadera (5 días / 4 noches)</h4>
+<table class="tabla-cotizacion w-full text-sm border-collapse my-4 rounded-xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.06)]"><thead><tr><th>Concepto</th><th>Incluye</th><th>Precio ref. (COP)</th></tr></thead><tbody><tr><td>Transporte ida y vuelta</td><td>Bus Medellín – PB – Medellín</td><td>$76.000 – $102.000</td></tr><tr><td>Traslados internos</td><td>PB – Ecorrefugio, Ecorrefugio – fincas, Maceo – PB</td><td>$160.000 – $250.000</td></tr><tr><td>Alojamiento</td><td>3 noches hotel PB/Maceo + 1 noche Ecorrefugio (cena + tertulia)</td><td>$390.000 – $600.000</td></tr><tr><td>Comidas</td><td>4 D, 4 A, 4 C (incl. cena campesina y almuerzo ganadero)</td><td>$180.000 – $300.000</td></tr><tr><td>Experiencia Ecorrefugio</td><td>Noche, cena, tertulia</td><td>Incl. en alojamiento</td></tr><tr><td>Experiencia ganadera D5</td><td>Ordeño, caballo, talabartería (operador/finca)</td><td>$80.000 – $120.000</td></tr><tr><td>TOTAL por persona (ref.)</td><td>—</td><td>$886.000 – $1.474.000</td></tr></tbody></table>                <h4 class="text-lg font-bold text-[#6b4226] mt-6 mb-2 font-headline">Paquete 5 – Ruta completa 6 días (todas las experiencias)</h4>
+<table class="tabla-cotizacion w-full text-sm border-collapse my-4 rounded-xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.06)]"><thead><tr><th>Concepto</th><th>Incluye</th><th>Precio ref. (COP)</th></tr></thead><tbody><tr><td>Transporte ida y vuelta</td><td>Bus Medellín – PB – Medellín</td><td>$76.000 – $102.000</td></tr><tr><td>Traslados internos</td><td>Todos los tramos (balneario, Ciénaga, Ecorrefugio, fincas, Bedout)</td><td>$280.000 – $450.000</td></tr><tr><td>Alojamiento</td><td>4 noches hotel + 1 noche Ecorrefugio</td><td>$480.000 – $750.000</td></tr><tr><td>Comidas</td><td>5 D, 5 A, 5 C (incl. cena campesina, almuerzo ganadero, desayuno Bedout)</td><td>$220.000 – $380.000</td></tr><tr><td>Actividades</td><td>Balneario, recorrido histórico, Ciénaga, Ecorrefugio, experiencia ganadera, San Juan Bedout</td><td>$250.000 – $400.000</td></tr><tr><td>TOTAL por persona (ref.)</td><td>—</td><td>$1.306.000 – $2.082.000</td></tr></tbody></table>            </div>
+  </div>
+</main>
+
+<footer class="site-footer text-white text-center py-10 mt-16 px-4">
+  <p class="opacity-90 text-sm">Rutas turísticas Puerto Berrío y Maceo — Magdalena Medio · Paisaje cultural ganadero</p>
+  <p class="opacity-60 text-xs mt-2">Precios referenciales; confirmar con cada proveedor.</p>
+</footer>
+
+</body></html>
