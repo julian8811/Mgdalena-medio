@@ -52,14 +52,14 @@
  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
  }).addTo(map);
- var colors = ["#19555B", "#2980b9", "#8E44AD", "#E67E22", "#27ae60"];
+ var colors = ["#19555B", "#2980b9", "#8E44AD", "#E67E22", "#27ae60", "#8B5CF6", "#0EA5A4"];
  window.RUTAS_JS.forEach(function (r, i) {
   var layer = addRouteToLayer(r.puntos, colors[i % colors.length]);
   layers.push({ id: r.id, layer: layer });
  });
  var q = new URLSearchParams(window.location.search).get("ruta");
  var initial = q ? parseInt(q, 10) : 1;
- if (!initial || initial < 1 || initial > 5) initial = 1;
+ if (!initial || initial < 1 || initial > 7) initial = 1;
  showRouteOnMap(initial);
  syncButtons(initial);
  }

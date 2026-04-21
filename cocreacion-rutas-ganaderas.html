@@ -10,78 +10,78 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script>
 tailwind.config = { darkMode: "class", theme: { extend: {
- colors: {
- primary: "#2b636a", "primary-dim": "#1c575d", "on-primary": "#d2faff",
- secondary: "#4e5c73", "on-secondary": "#eef2ff", "secondary-container": "#cfddf8",
- "on-secondary-container": "#414f65", tertiary: "#576100", "tertiary-container": "#e7f95e",
- "on-tertiary-container": "#555d00", surface: "#fbf6ee", "on-surface": "#302f2a",
- "on-surface-variant": "#5e5b55", "surface-container-low": "#f5f0e8", "surface-container-lowest": "#ffffff",
- "primary-container": "#aee7ed", "on-primary-container": "#1a565c"
- },
- fontFamily: { headline: ["Plus Jakarta Sans","sans-serif"], body: ["Manrope","sans-serif"] }
+  colors: {
+    primary: "#2b636a", "primary-dim": "#1c575d", "on-primary": "#d2faff",
+    secondary: "#4e5c73", "on-secondary": "#eef2ff", "secondary-container": "#cfddf8",
+    "on-secondary-container": "#414f65", tertiary: "#576100", "tertiary-container": "#e7f95e",
+    "on-tertiary-container": "#555d00", surface: "#fbf6ee", "on-surface": "#302f2a",
+    "on-surface-variant": "#5e5b55", "surface-container-low": "#f5f0e8", "surface-container-lowest": "#ffffff",
+    "primary-container": "#aee7ed", "on-primary-container": "#1a565c"
+  },
+  fontFamily: { headline: ["Plus Jakarta Sans","sans-serif"], body: ["Manrope","sans-serif"] }
 }}}
 </script>
 <script defer src="assets/js/site.js"></script>
 </head>
 <body class="text-on-surface min-h-screen pb-24">
 <header class="site-header fixed top-0 w-full z-50 bg-[#fbf6ee]/85 backdrop-blur-md flex flex-wrap justify-between items-center gap-2 px-4 md:px-6 min-h-16 py-2">
- <div class="flex items-center gap-3">
- <button type="button" id="nav-toggle" class="md:hidden material-symbols-outlined text-[#19555B] p-2 rounded-full hover:bg-black/5" aria-label="Menú">menu</button>
- <a href="index.html" class="brand-mark">
-  <span class="brand-title">Magdalena Medio</span>
-  <span class="brand-tagline">Turismo ganadero</span>
- </a>
- </div>
- <nav id="nav-panel" class="hidden md:flex w-full md:w-auto flex-col md:flex-row gap-1 md:gap-6 text-sm font-bold text-primary pb-2 md:pb-0">
- <a class="nav-link py-2" href="index.html">Inicio</a>
- <a class="nav-link py-2" href="explorar-rutas.html">Explorar rutas</a>
- <a class="nav-link py-2" href="mapa.html">Mapa</a>
- <a class="nav-link py-2" href="directorio.html">Directorio</a>
- <a class="nav-link py-2" href="cotizacion.html">Cotización</a>
- <a class="nav-link py-2" href="cocreacion-rutas-ganaderas.html">Cocreación de rutas ganaderas</a>
- </nav>
+  <div class="flex items-center gap-3">
+    <button type="button" id="nav-toggle" class="md:hidden material-symbols-outlined text-[#19555B] p-2 rounded-full hover:bg-black/5" aria-label="Menú">menu</button>
+    <a href="index.html" class="brand-mark">
+      <span class="brand-title">Magdalena Medio</span>
+      <span class="brand-tagline">Turismo ganadero</span>
+    </a>
+  </div>
+  <nav id="nav-panel" class="hidden md:flex w-full md:w-auto flex-col md:flex-row gap-1 md:gap-6 text-sm font-bold text-primary pb-2 md:pb-0">
+    <a class="nav-link py-2" href="index.html">Inicio</a>
+    <a class="nav-link py-2" href="explorar-rutas.html">Explorar rutas</a>
+    <a class="nav-link py-2" href="mapa.html">Mapa</a>
+    <a class="nav-link py-2" href="directorio.html">Directorio</a>
+    <a class="nav-link py-2" href="cotizacion.html">Cotización</a>
+    <a class="nav-link py-2" href="cocreacion-rutas-ganaderas.html">Cocreación de rutas ganaderas</a>
+  </nav>
 </header>
 
 <main class="pt-24 px-6 max-w-7xl mx-auto">
- <header class="mb-12">
- <p class="text-[10px] font-bold tracking-widest uppercase text-tertiary mb-3">Nueva pestaña</p>
- <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Cocreación de rutas ganaderas</h1>
- <p class="text-on-surface-variant max-w-3xl">Se incorporan dos rutas adicionales de cocreación para complementar la oferta turística de Puerto Berrío y Maceo.</p>
- </header>
+  <header class="mb-12">
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Cocreación de rutas ganaderas</h1>
+  </header>
 
- <section class="grid md:grid-cols-2 gap-8">
- <article class="bg-surface-container-lowest rounded-3xl overflow-hidden border border-white/80 shadow-[0_12px_40px_rgba(23,37,57,0.10)]">
-  <img src="assets/images/cocreacion-ruta1.png" alt="Ruta 1 cocreación ganadera" class="w-full h-64 object-cover"/>
-  <div class="p-7">
-  <h2 class="text-2xl font-bold mb-2">Ruta 1: Experiencia Ganadera</h2>
-  <p class="text-on-surface-variant mb-4">Ordeño, La Alpina, San Juan de Bedout, Casa del Río y gastronomía bufalina.</p>
-  <p class="font-semibold text-primary mb-4">Estimado: $420.000 - $720.000</p>
-  <ul class="space-y-2 text-sm text-on-surface-variant">
-   <li>Finca Las Camelias - Liller Inversiones</li>
-   <li>LA ALPINA Centro Turístico</li>
-   <li>San Juan de Bedout</li>
-   <li>Casa del Río Hotel</li>
-   <li>COLBUFALA</li>
-  </ul>
-  </div>
- </article>
+  <section class="grid md:grid-cols-2 gap-8">
+    <a href="ruta-cocreacion-1-ganadera.html" class="group block bg-surface-container-lowest rounded-3xl overflow-hidden border border-white/80 shadow-[0_12px_40px_rgba(23,37,57,0.10)] hover:-translate-y-1 transition-all">
+      <img src="assets/images/cocreacion-ruta1.png" alt="Ruta 1 cocreación ganadera" class="w-full h-64 object-cover"/>
+      <div class="p-7">
+        <h2 class="text-2xl font-bold mb-2">Ruta 1: Experiencia Ganadera</h2>
+        <p class="text-on-surface-variant mb-4">Ordeño, La Alpina, San Juan de Bedout, Casa del Río y gastronomía bufalina.</p>
+        <p class="font-semibold text-primary mb-4">Estimado: $420.000 - $720.000</p>
+        <ul class="space-y-2 text-sm text-on-surface-variant">
+          <li>Finca Las Camelias - Liller Inversiones</li>
+          <li>LA ALPINA Centro Turístico</li>
+          <li>San Juan de Bedout</li>
+          <li>Casa del Río Hotel</li>
+          <li>COLBUFALA</li>
+        </ul>
+        <p class="mt-5 text-primary font-bold inline-flex items-center gap-2">Ver detalle de la ruta <span class="material-symbols-outlined">arrow_forward</span></p>
+      </div>
+    </a>
 
- <article class="bg-surface-container-lowest rounded-3xl overflow-hidden border border-white/80 shadow-[0_12px_40px_rgba(23,37,57,0.10)]">
-  <img src="assets/images/cocreacion-ruta2.png" alt="Ruta 2 cocreación histórica y naturaleza" class="w-full h-64 object-cover"/>
-  <div class="p-7">
-  <h2 class="text-2xl font-bold mb-2">Ruta 2: Recorrido Histórico y Naturaleza</h2>
-  <p class="text-on-surface-variant mb-4">Malecón, río Magdalena, puente monumental, Ciénaga de Barbacoas y finca ganadera.</p>
-  <p class="font-semibold text-primary mb-4">Estimado: $380.000 - $650.000</p>
-  <ul class="space-y-2 text-sm text-on-surface-variant">
-   <li>Casa del Río Hotel</li>
-   <li>Malecón - San Diego</li>
-   <li>Iglesia Nuestra Señora de los Dolores</li>
-   <li>Tour en lancha por el río Magdalena</li>
-   <li>Ciénaga de Barbacoas</li>
-  </ul>
-  </div>
- </article>
- </section>
+    <a href="ruta-cocreacion-2-historica.html" class="group block bg-surface-container-lowest rounded-3xl overflow-hidden border border-white/80 shadow-[0_12px_40px_rgba(23,37,57,0.10)] hover:-translate-y-1 transition-all">
+      <img src="assets/images/cocreacion-ruta2.png" alt="Ruta 2 cocreación histórica y naturaleza" class="w-full h-64 object-cover"/>
+      <div class="p-7">
+        <h2 class="text-2xl font-bold mb-2">Ruta 2: Recorrido Histórico y Naturaleza</h2>
+        <p class="text-on-surface-variant mb-4">Malecón, río Magdalena, puente monumental, Ciénaga de Barbacoas y finca ganadera.</p>
+        <p class="font-semibold text-primary mb-4">Estimado: $380.000 - $650.000</p>
+        <ul class="space-y-2 text-sm text-on-surface-variant">
+          <li>Casa del Río Hotel</li>
+          <li>Malecón - San Diego</li>
+          <li>Iglesia Nuestra Señora de los Dolores</li>
+          <li>Tour en lancha por el río Magdalena</li>
+          <li>Ciénaga de Barbacoas</li>
+        </ul>
+        <p class="mt-5 text-primary font-bold inline-flex items-center gap-2">Ver detalle de la ruta <span class="material-symbols-outlined">arrow_forward</span></p>
+      </div>
+    </a>
+  </section>
 </main>
 
 <footer class="site-footer text-white text-center py-10 mt-16 px-4 text-sm">Magdalena Medio · Cocreación de rutas ganaderas</footer>
