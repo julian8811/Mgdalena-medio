@@ -667,9 +667,6 @@
   line-height: 1.4;
   color: #5e5b55;
 }
-.mm-compare-itin-list + .mm-compare-itin-meta {
-  margin-top: 0.45rem;
-}
 .mm-compare-itin-day {
   margin: 0.55rem 0 0.2rem;
   font-size: 0.7rem;
@@ -685,13 +682,6 @@
 }
 .mm-compare-itin-list li {
   margin: 0.12rem 0;
-}
-.mm-compare-itin-note {
-  margin: 0.65rem 0 0;
-  padding-top: 0.5rem;
-  border-top: 1px dashed rgba(43, 99, 106, 0.25);
-  font-size: 0.72rem;
-  color: #4a4844;
 }
 .mm-compare-total td {
   background: rgba(43, 99, 106, 0.1);

@@ -300,8 +300,6 @@
       +                 '<li>13:00 · Traslado hotel → aeropuerto.</li>'
       +                 '<li>14:30 · Salida vuelo / regreso a ciudad de origen.</li>'
       +               '</ul>'
-      +               '<p class="mm-compare-itin-meta">El PDF incluye una línea «Día 4» sin cronograma (plantilla); no se replica aquí.</p>'
-      +               '<p class="mm-compare-itin-note">Servicios terrestres, alojamiento, alimentación, actividades académicas, safari llanero, guianza y asistencia al viajero van integrados en el paquete. <strong>El PDF no discrimina por rubro en pesos por persona.</strong></p>'
       +             '</div>'
       +           '</td></tr>'
       +           '<tr><td>Traslados internos (todos los tramos)</td><td>$280.000 – $450.000</td></tr>'
