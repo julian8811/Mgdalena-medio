@@ -83,7 +83,7 @@
   color: #fff;
 }
 
-/* ------- Floating action buttons (WhatsApp + Cotización) ------- */
+/* ------- FAB flotante (cotización) ------- */
 .fab-dock {
   position: fixed;
   right: 18px;
@@ -92,6 +92,9 @@
   flex-direction: column;
   gap: 12px;
   z-index: 55;
+}
+.fab-dock--single {
+  gap: 0;
 }
 .fab {
   width: 58px;
@@ -109,9 +112,6 @@
 .fab:hover {
   transform: translateY(-3px) scale(1.04);
   box-shadow: 0 14px 34px rgba(23, 37, 57, 0.28);
-}
-.fab-wa {
-  background: #25D366;
 }
 .fab-quote {
   background: linear-gradient(135deg, #2b636a, #1c575d);
@@ -138,21 +138,6 @@
 }
 .fab:hover::after {
   opacity: 1;
-}
-.fab-pulse::before {
-  content: "";
-  position: absolute;
-  inset: -4px;
-  border-radius: 50%;
-  border: 2px solid currentColor;
-  opacity: 0.6;
-  animation: fabPulse 1.8s ease-out infinite;
-  pointer-events: none;
-}
-@keyframes fabPulse {
-  0%   { transform: scale(0.9); opacity: 0.6; }
-  80%  { transform: scale(1.45); opacity: 0; }
-  100% { transform: scale(1.45); opacity: 0; }
 }
 
 /* ------- Contadores animados ------- */
@@ -189,6 +174,8 @@
   transition: all 0.25s ease;
   font-size: 0.85rem;
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
 }
 .day-tab:hover {
   color: #2b636a;
@@ -197,6 +184,7 @@
   background: linear-gradient(135deg, #2b636a, #1c575d);
   color: #fff;
   box-shadow: 0 6px 18px rgba(43, 99, 106, 0.35);
+  overflow: visible;
 }
 .day-panel {
   display: none;
@@ -342,13 +330,19 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.2s ease;
+}
+.chip-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(43, 99, 106, 0.12);
+  border-color: rgba(43, 99, 106, 0.28);
 }
 .chip-pill .material-symbols-outlined {
   font-size: 18px;
 }
 
-/* ------- Ripple sutil en botones primarios ------- */
-.btn-primary-glow, .fab {
+/* ------- Ripple sutil en botones y chips ------- */
+.btn-primary-glow, .fab, .filter-chip, .map-route-btn {
   overflow: hidden;
   position: relative;
 }
@@ -468,5 +462,19 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-carousel-slide {
     transition: none;
+  }
+}
+
+/* Zoom suave en la diapositiva activa del hero */
+.hero-zoom-media .hero-carousel-slide.is-active img {
+  transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: scale(1);
+}
+.hero-zoom-media:hover .hero-carousel-slide.is-active img {
+  transform: scale(1.045);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-zoom-media:hover .hero-carousel-slide.is-active img {
+    transform: none;
   }
 }

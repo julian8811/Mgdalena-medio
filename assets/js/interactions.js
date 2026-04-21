@@ -13,6 +13,9 @@
     mountFabDock();
     mountRipple();
     mountHeroCarousel();
+    mountNavHighlight();
+    mountHeaderScroll();
+    mountParallaxDecor();
   }
 
   // ------- Scroll reveal -------
@@ -128,7 +131,7 @@
 
   // ------- Barra de progreso -------
   function mountProgressBar() {
-    if (!document.querySelector("[data-progress]")) return;
+    if (document.body.hasAttribute("data-no-progress")) return;
     var bar = document.createElement("div");
     bar.className = "read-progress";
     document.body.appendChild(bar);
@@ -160,20 +163,76 @@
     }, { passive: true });
   }
 
-  // ------- FAB dock (WhatsApp + Cotización) -------
+  // ------- FAB flotante (solo cotización) -------
   function mountFabDock() {
     if (document.body.hasAttribute("data-no-fab")) return;
     if (document.querySelector(".fab-dock")) return;
     var dock = document.createElement("div");
-    dock.className = "fab-dock";
+    dock.className = "fab-dock fab-dock--single";
     dock.innerHTML = ''
-      + '<a class="fab fab-wa fab-pulse" data-tooltip="Escríbenos por WhatsApp" target="_blank" rel="noopener" href="https://wa.me/573108317438?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20las%20rutas%20del%20Magdalena%20Medio.">'
-      +   '<span class="material-symbols-outlined">chat</span>'
-      + '</a>'
       + '<a class="fab fab-quote" data-tooltip="Ver cotización" href="cotizacion.html">'
       +   '<span class="material-symbols-outlined">request_quote</span>'
       + '</a>';
     document.body.appendChild(dock);
+  }
+
+  // ------- Resaltar pestaña de navegación actual -------
+  function mountNavHighlight() {
+    var file = currentPageFile();
+    document.querySelectorAll("a.nav-link[href]").forEach(function (a) {
+      var href = (a.getAttribute("href") || "").split("?")[0].split("#")[0].trim();
+      var hfile = href.split("/").pop();
+      if (hfile && hfile.toLowerCase() === file.toLowerCase()) {
+        a.classList.add("nav-link--current");
+        a.setAttribute("aria-current", "page");
+      }
+    });
+  }
+
+  function currentPageFile() {
+    var path = (window.location.pathname || "/").split("?")[0];
+    var parts = path.replace(/\/+$/, "").split("/").filter(Boolean);
+    var seg = parts.length ? parts[parts.length - 1] : "";
+    if (!seg || seg === "index.html") return "index.html";
+    if (seg === "index") return "index.html";
+    if (/\.html$/i.test(seg)) return seg;
+    return seg + ".html";
+  }
+
+  // ------- Cabecera al hacer scroll -------
+  function mountHeaderScroll() {
+    var header = document.querySelector(".site-header");
+    if (!header) return;
+    function tick() {
+      if (window.scrollY > 10) header.classList.add("site-header--scrolled");
+      else header.classList.remove("site-header--scrolled");
+    }
+    document.addEventListener("scroll", tick, { passive: true });
+    tick();
+  }
+
+  // ------- Parallax muy suave en decorativos -------
+  function mountParallaxDecor() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var els = document.querySelectorAll(".mm-parallax-bg");
+    if (!els.length) return;
+    var ticking = false;
+    function update() {
+      var y = window.scrollY || 0;
+      els.forEach(function (el) {
+        var k = parseFloat(el.getAttribute("data-parallax") || "0.06");
+        el.style.transform = "translate3d(0, " + Math.round(y * k) + "px, 0)";
+      });
+      ticking = false;
+    }
+    function onScroll() {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    }
+    document.addEventListener("scroll", onScroll, { passive: true });
+    update();
   }
 
   // ------- Carrusel hero (index) -------
@@ -255,15 +314,22 @@
     arm();
   }
 
-  // ------- Ripple en botones -------
+  // ------- Ripple en botones y chips -------
   function mountRipple() {
     document.addEventListener("click", function (evt) {
-      var btn = evt.target.closest(".btn-primary-glow, .fab");
+      var btn = evt.target.closest(".btn-primary-glow, .fab, .filter-chip, .map-route-btn, .day-tab");
       if (!btn) return;
       var rect = btn.getBoundingClientRect();
       var size = Math.max(rect.width, rect.height);
       var ripple = document.createElement("span");
       ripple.className = "ripple";
+      if (btn.classList.contains("filter-chip")) {
+        ripple.style.backgroundColor = "rgba(43, 99, 106, 0.18)";
+      } else if (btn.classList.contains("map-route-btn")) {
+        ripple.style.backgroundColor = "rgba(255, 255, 255, 0.35)";
+      } else if (btn.classList.contains("day-tab")) {
+        ripple.style.backgroundColor = "rgba(43, 99, 106, 0.12)";
+      }
       ripple.style.width = ripple.style.height = size + "px";
       ripple.style.left = (evt.clientX - rect.left - size / 2) + "px";
       ripple.style.top  = (evt.clientY - rect.top  - size / 2) + "px";

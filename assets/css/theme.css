@@ -27,6 +27,11 @@ body {
 .site-header {
   border-bottom: 1px solid rgba(25, 85, 91, 0.12);
   box-shadow: 0 4px 24px rgba(23, 37, 57, 0.06);
+  transition: box-shadow 0.28s ease, border-color 0.28s ease;
+}
+.site-header.site-header--scrolled {
+  box-shadow: 0 10px 36px rgba(23, 37, 57, 0.12);
+  border-bottom-color: rgba(25, 85, 91, 0.18);
 }
 
 .brand-mark {
@@ -76,6 +81,13 @@ body {
   transition: width 0.25s ease;
 }
 .nav-link:hover::after {
+  width: 100%;
+}
+.nav-link--current {
+  color: #1c575d;
+  font-weight: 800;
+}
+.nav-link--current::after {
   width: 100%;
 }
 
