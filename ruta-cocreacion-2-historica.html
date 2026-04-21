@@ -9,7 +9,12 @@
 <link rel="stylesheet" href="assets/css/theme.css"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{primary:"#2b636a","on-primary":"#d2faff",surface:"#fbf6ee","on-surface":"#302f2a","on-surface-variant":"#5e5b55","surface-container-low":"#f5f0e8",tertiary:"#576100"}}}}</script>
-<style>.material-symbols-outlined{font-variation-settings:'FILL'0,'wght'400,'GRAD'0,'opsz'24}</style>
+<style>.material-symbols-outlined{font-variation-settings:'FILL'0,'wght'400,'GRAD'0,'opsz'24}
+.itin-table{width:100%;border-collapse:collapse;font-size:0.9rem}
+.itin-table th,.itin-table td{border:1px solid #e7e1d3;padding:8px 10px;text-align:left;vertical-align:top}
+.itin-table th{background:#f5f0e8;color:#576100;font-weight:700}
+.itin-table tr:nth-child(even) td{background:#fbf6ee}
+</style>
 <script defer src="assets/js/site.js"></script>
 </head>
 <body class="text-on-surface pb-24">
@@ -20,26 +25,61 @@
  <span class="brand-tagline">Turismo ganadero</span>
 </a>
 </header>
-<main class="mt-16 max-w-4xl mx-auto px-6 py-8">
+<main class="mt-16 max-w-5xl mx-auto px-6 py-8">
 <div class="rounded-2xl overflow-hidden h-56 mb-8 shadow-lg">
-<img class="w-full h-full object-cover" alt="Ruta Cocreación histórica y naturaleza" src="assets/images/cocreacion-ruta2.png"/>
+<img class="w-full h-full object-cover" alt="Ruta cocreación histórica y naturaleza" src="assets/images/cocreacion-ruta2.png"/>
 </div>
-<p class="text-[10px] font-bold uppercase tracking-widest text-tertiary mb-2">Ruta cocreación 2</p>
-<h1 class="text-4xl font-extrabold text-on-surface mb-4 font-['Plus_Jakarta_Sans']">Recorrido histórico y naturaleza</h1>
-<p class="text-on-surface-variant mb-8">Malecón, río Magdalena, puente monumental, Ciénaga de Barbacoas y experiencias rurales de la región.</p>
-<div class="grid md:grid-cols-3 gap-6">
+<p class="text-[10px] font-bold uppercase tracking-widest text-tertiary mb-2">Ruta cocreación 2 · 2 noches / 3 días</p>
+<h1 class="text-4xl font-extrabold text-on-surface mb-4 font-['Plus_Jakarta_Sans']">Descubre el corazón ganadero del Magdalena Medio</h1>
+<p class="text-on-surface-variant mb-8">Recorrido patrimonial por Puerto Berrío, navegación entre puentes, sala lechera La Ganadera, show del queso en Colbúfala, día en la Ciénaga de Barbacoas y cierre con fogata en Finca Las Camelias.</p>
+
+<div class="grid md:grid-cols-3 gap-6 mb-10">
 <div class="md:col-span-2 space-y-3 text-sm">
-<p><strong>Secuencia de puntos:</strong> Casa del Río Hotel → Malecón San Diego → Iglesia Nuestra Señora de los Dolores → Tour en lancha por el río Magdalena → Ciénaga de Barbacoas.</p>
-<p><strong>Incluye:</strong> recorrido patrimonial, navegación, interpretación de paisaje y actividades de naturaleza.</p>
+<p><strong>Público objetivo:</strong> profesionales y familias que buscan involucrarse en las experiencias del territorio.</p>
+<p><strong>Punto de encuentro:</strong> Parque Principal o Casa del Río Hotel.</p>
+<p><strong>Actores participantes:</strong> Casa del Río Hotel, guía historiador, operadores de lancha del río Magdalena (Biochicoas / Descúbrelo Tours), Sala Lechera La Ganadera, Colbúfala, Ranchería de la Ciénaga de Barbacoas y Finca Las Camelias.</p>
 </div>
 <div class="bg-surface-container-low p-6 rounded-2xl h-fit">
 <p class="text-xs uppercase font-bold text-gray-500 mb-2">Por persona (aprox.)</p>
-<p class="text-2xl font-extrabold text-tertiary mb-4">$380.000 – $650.000</p>
+<p class="text-2xl font-extrabold text-tertiary mb-4">$820.000 – $1.420.000</p>
 <a href="mapa.html?ruta=7" class="block text-center bg-primary text-on-primary py-3 rounded-full font-bold text-sm mb-2">Ver mapa</a>
 <a href="directorio.html" class="block text-center border-2 border-primary text-primary py-3 rounded-full font-bold text-sm mb-2">Ver directorio</a>
 <a href="cotizacion.html" class="block text-center text-primary font-bold text-sm">Ver cotización</a>
 </div>
 </div>
+
+<section class="mb-10">
+<h2 class="text-2xl font-extrabold text-on-surface mb-4 font-['Plus_Jakarta_Sans']">Día 1 · Puerto Berrío patrimonial</h2>
+<div class="overflow-x-auto"><table class="itin-table"><thead><tr><th>Horario</th><th>Actividad</th><th>Lugar</th><th>Observaciones</th></tr></thead><tbody>
+<tr><td>12:00 m.</td><td>Recibimiento en Parque Principal / llegada al hotel</td><td>Casa del Río · río Palmar – Magdalena · Malecón San Diego</td><td>Contexto cultural del territorio con guía historiador.</td></tr>
+<tr><td>9:30 a. m. (Día 1 temprano)</td><td>Recorrido por el territorio: infraestructura urbana, Hotel Magdalena, Puente Monumental, historia del ferrocarril</td><td>Iglesia Nuestra Señora de los Dolores · cementerio</td><td>Recorrido urbano por entorno, infraestructura y cultura.</td></tr>
+<tr><td>12:00 p. m.</td><td>Almuerzo en el puerto</td><td>Restaurante del puerto</td><td>Comida típica, pescado fresco.</td></tr>
+<tr><td>1:30 p. m.</td><td>Recorrido en lancha puente a puente</td><td>Río Magdalena</td><td>Navegación interpretativa entre los dos puentes.</td></tr>
+<tr><td>2:30 p. m.</td><td>Visita a la Sala Lechera La Ganadera</td><td>Sala lechera La Ganadera</td><td>Apreciar el entorno agropecuario e historias locales.</td></tr>
+<tr><td>3:00 p. m.</td><td>Show del queso caliente</td><td>Colbúfala</td><td>Historia del queso y proceso en vivo.</td></tr>
+<tr><td>7:00 p. m.</td><td>Cena con producto bufalino</td><td>Colbúfala</td><td>Experiencia de los derivados de la búfala.</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="mb-10">
+<h2 class="text-2xl font-extrabold text-on-surface mb-4 font-['Plus_Jakarta_Sans']">Día 2 · Río Magdalena y Ciénaga de Barbacoas</h2>
+<div class="overflow-x-auto"><table class="itin-table"><thead><tr><th>Horario</th><th>Actividad</th><th>Lugar</th></tr></thead><tbody>
+<tr><td>5:10 a. m.</td><td>Avistamiento del amanecer</td><td>Puerto</td></tr>
+<tr><td>6:00 a. m.</td><td>Movilización en lancha del río a la ciénaga</td><td>Río Magdalena</td></tr>
+<tr><td>7:30 a. m.</td><td>Llegada a la ranchería y desayuno</td><td>Ranchería Ciénaga</td></tr>
+<tr><td>8:30 a. m.</td><td>Movilización en lancha por la ciénaga</td><td>Ciénaga de Barbacoas</td></tr>
+<tr><td>12:00 m.</td><td>Almuerzo con música en vivo</td><td>Ranchería Ciénaga</td></tr>
+<tr><td>2:00 p. m.</td><td>Retorno al puerto</td><td>Puerto Berrío</td></tr>
+<tr><td>5:00 p. m.</td><td>Movilización a finca ganadera</td><td>Finca Las Camelias</td></tr>
+<tr><td>6:00 p. m.</td><td>Cena tipo asado e integración alrededor de la fogata</td><td>Finca Las Camelias</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="mb-10">
+<h2 class="text-2xl font-extrabold text-on-surface mb-4 font-['Plus_Jakarta_Sans']">Día 3 · Cierre y regreso</h2>
+<p class="text-on-surface-variant">Desayuno en la finca, espacio libre para compras y actividades complementarias, retorno a Puerto Berrío y salida a Medellín por vía terrestre o aérea.</p>
+</section>
+
 </main>
 <footer class="site-footer text-white text-center py-8 text-sm">Ruta cocreación 2 · Magdalena Medio</footer>
 </body>

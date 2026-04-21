@@ -9,7 +9,12 @@
 <link rel="stylesheet" href="assets/css/theme.css"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{primary:"#2b636a","on-primary":"#d2faff",surface:"#fbf6ee","on-surface":"#302f2a","on-surface-variant":"#5e5b55","surface-container-low":"#f5f0e8",tertiary:"#576100"}}}}</script>
-<style>.material-symbols-outlined{font-variation-settings:'FILL'0,'wght'400,'GRAD'0,'opsz'24}</style>
+<style>.material-symbols-outlined{font-variation-settings:'FILL'0,'wght'400,'GRAD'0,'opsz'24}
+.itin-table{width:100%;border-collapse:collapse;font-size:0.9rem}
+.itin-table th,.itin-table td{border:1px solid #e7e1d3;padding:8px 10px;text-align:left;vertical-align:top}
+.itin-table th{background:#f5f0e8;color:#576100;font-weight:700}
+.itin-table tr:nth-child(even) td{background:#fbf6ee}
+</style>
 <script defer src="assets/js/site.js"></script>
 </head>
 <body class="text-on-surface pb-24">
@@ -20,26 +25,76 @@
  <span class="brand-tagline">Turismo ganadero</span>
 </a>
 </header>
-<main class="mt-16 max-w-4xl mx-auto px-6 py-8">
+<main class="mt-16 max-w-5xl mx-auto px-6 py-8">
 <div class="rounded-2xl overflow-hidden h-56 mb-8 shadow-lg">
 <img class="w-full h-full object-cover" alt="Ruta cocreación experiencia ganadera" src="assets/images/cocreacion-ruta1.png"/>
 </div>
-<p class="text-[10px] font-bold uppercase tracking-widest text-tertiary mb-2">Ruta cocreación 1</p>
-<h1 class="text-4xl font-extrabold text-on-surface mb-4 font-['Plus_Jakarta_Sans']">Experiencia ganadera</h1>
-<p class="text-on-surface-variant mb-8">Ordeño, La Alpina, San Juan de Bedout, Casa del Río y gastronomía bufalina en Puerto Berrío y Maceo.</p>
-<div class="grid md:grid-cols-3 gap-6">
+<p class="text-[10px] font-bold uppercase tracking-widest text-tertiary mb-2">Ruta cocreación 1 · 2 noches / 3 días</p>
+<h1 class="text-4xl font-extrabold text-on-surface mb-4 font-['Plus_Jakarta_Sans']">Vive la ganadería, no la mires desde lejos</h1>
+<p class="text-on-surface-variant mb-8">Experiencia inmersiva en tres fincas ganaderas del Magdalena Medio: Las Camelias, San Juan de Bedout y Hacienda La Tagua. Ordeño, cabalgatas, gastronomía de campo y cierre bufalino en Colbúfala.</p>
+
+<div class="grid md:grid-cols-3 gap-6 mb-10">
 <div class="md:col-span-2 space-y-3 text-sm">
-<p><strong>Secuencia de puntos:</strong> Finca Las Camelias (Liller Inversiones) → La Alpina Centro Turístico → San Juan de Bedout → Casa del Río Hotel → COLBUFALA.</p>
-<p><strong>Incluye:</strong> traslados locales, actividades ganaderas, experiencias de campo y paradas gastronómicas.</p>
+<p><strong>Público objetivo:</strong> familias, estudiantes especializados, vocación ganadera, turistas nacionales y extranjeros.</p>
+<p><strong>Punto de encuentro:</strong> La Alpina Centro Turístico o restaurante El Portal.</p>
+<p><strong>Transporte interno:</strong> minivan o camioneta 4x4.</p>
+<p><strong>Aforo máximo:</strong> 10 a 20 personas.</p>
+<p><strong>Actores participantes:</strong> Finca Las Camelias (Liller Inversiones), Hacienda San Juan de Bedout, Hacienda La Tagua, Casa del Río Hotel / Apartahotel San Diego, Colbúfala y restaurantes locales (Casa Vieja, El Portal, La Martina).</p>
 </div>
 <div class="bg-surface-container-low p-6 rounded-2xl h-fit">
 <p class="text-xs uppercase font-bold text-gray-500 mb-2">Por persona (aprox.)</p>
-<p class="text-2xl font-extrabold text-tertiary mb-4">$420.000 – $720.000</p>
+<p class="text-2xl font-extrabold text-tertiary mb-4">$780.000 – $1.350.000</p>
 <a href="mapa.html?ruta=6" class="block text-center bg-primary text-on-primary py-3 rounded-full font-bold text-sm mb-2">Ver mapa</a>
 <a href="directorio.html" class="block text-center border-2 border-primary text-primary py-3 rounded-full font-bold text-sm mb-2">Ver directorio</a>
 <a href="cotizacion.html" class="block text-center text-primary font-bold text-sm">Ver cotización</a>
 </div>
 </div>
+
+<section class="mb-10">
+<h2 class="text-2xl font-extrabold text-on-surface mb-4 font-['Plus_Jakarta_Sans']">Día 1 · Finca Las Camelias</h2>
+<div class="overflow-x-auto"><table class="itin-table"><thead><tr><th>Horario</th><th>Actividad</th><th>Lugar</th></tr></thead><tbody>
+<tr><td>6:00 a. m.</td><td>Ordeño</td><td>Finca Las Camelias</td></tr>
+<tr><td>7:30 a. m.</td><td>Desayuno tradicional</td><td>Finca Las Camelias</td></tr>
+<tr><td>8:00 a. m.</td><td>Paseo a caballo por campos y paisajes ganaderos. Historia de fincas en contexto ganadero.</td><td>Finca Las Camelias</td></tr>
+<tr><td>12:00 m.</td><td>Almuerzo ganadero (sancocho trifásico)</td><td>Finca Las Camelias</td></tr>
+<tr><td>2:00 p. m.</td><td>Retorno</td><td>Puerto Berrío</td></tr>
+<tr><td>3:00 p. m.</td><td>Compras para llevar</td><td>Puerto Berrío</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="mb-10">
+<h2 class="text-2xl font-extrabold text-on-surface mb-4 font-['Plus_Jakarta_Sans']">Día 2 · San Juan de Bedout</h2>
+<div class="overflow-x-auto"><table class="itin-table"><thead><tr><th>Horario</th><th>Actividad</th><th>Lugar</th><th>Valor turístico</th></tr></thead><tbody>
+<tr><td>8:00 a. m.</td><td>Desayuno</td><td>La Alpina / El Portal</td><td>Transferencia de conocimiento</td></tr>
+<tr><td>10:30 a. m.</td><td>Caracterización de la finca</td><td>San Juan de Bedout</td><td>Historia sobre ganadería</td></tr>
+<tr><td>11:30 a. m.</td><td>Recorrido por instalaciones</td><td>San Juan de Bedout</td><td>Inducción y bioseguridad</td></tr>
+<tr><td>1:00 p. m.</td><td>Almuerzo típico</td><td>San Juan de Bedout</td><td>Placer gastronómico</td></tr>
+<tr><td>2:00 p. m.</td><td>Visita a establos</td><td>San Juan de Bedout</td><td>Razas cebuinas</td></tr>
+<tr><td>3:15 p. m.</td><td>Salida de campo con vaqueros</td><td>San Juan de Bedout</td><td>Producción ganadera</td></tr>
+<tr><td>5:00 p. m.</td><td>Refrigerio</td><td>San Juan de Bedout</td><td>Productos de la región</td></tr>
+<tr><td>5:30 p. m.</td><td>Regreso a Puerto Berrío</td><td>—</td><td>—</td></tr>
+<tr><td>6:30 p. m.</td><td>Instalación en hotel</td><td>Casa del Río / San Diego</td><td>Espacios confortables</td></tr>
+<tr><td>7:30 p. m.</td><td>Cena</td><td>Colbúfala / Casa Vieja / El Portal / La Martina</td><td>Variedad gastronómica</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="mb-10">
+<h2 class="text-2xl font-extrabold text-on-surface mb-4 font-['Plus_Jakarta_Sans']">Día 3 · Hacienda La Tagua</h2>
+<div class="overflow-x-auto"><table class="itin-table"><thead><tr><th>Horario</th><th>Actividad</th><th>Lugar</th></tr></thead><tbody>
+<tr><td>6:00 a. m.</td><td>Salida hacia la finca</td><td>Hotel – Hacienda La Tagua</td></tr>
+<tr><td>6:30 a. m.</td><td>Llegada y ordeño</td><td>Corrales Hacienda La Tagua</td></tr>
+<tr><td>7:30 a. m.</td><td>Desayuno</td><td>Hacienda La Tagua</td></tr>
+<tr><td>8:30 a. m.</td><td>Introducción de la empresa</td><td>Hacienda La Tagua</td></tr>
+<tr><td>9:30 a. m.</td><td>Salida a caballo y manejo de campo</td><td>Potreros Hacienda La Tagua</td></tr>
+<tr><td>11:30 a. m.</td><td>Refrigerio e hidratación</td><td>Instalaciones Hacienda La Tagua</td></tr>
+<tr><td>12:30 p. m.</td><td>Desplazamiento a caballo al río</td><td>Quebrada La Malena</td></tr>
+<tr><td>1:00 p. m.</td><td>Almuerzo fiambre de vaquero</td><td>Quebrada La Malena</td></tr>
+<tr><td>2:30 p. m.</td><td>Desplazamiento a la casa</td><td>Hacienda La Tagua</td></tr>
+<tr><td>3:00 p. m.</td><td>Salida a Puerto Berrío</td><td>Puerto Berrío</td></tr>
+<tr><td>4:00 p. m.</td><td>Tour por Puerto Berrío y cierre</td><td>Puerto Berrío</td></tr>
+</tbody></table></div>
+</section>
+
 </main>
 <footer class="site-footer text-white text-center py-8 text-sm">Ruta cocreación 1 · Magdalena Medio</footer>
 </body>
