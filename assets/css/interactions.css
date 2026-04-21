@@ -55,7 +55,7 @@
 .back-to-top {
   position: fixed;
   right: 18px;
-  bottom: 96px;
+  bottom: 132px;
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -93,9 +93,6 @@
   gap: 12px;
   z-index: 55;
 }
-.fab-dock--single {
-  gap: 0;
-}
 .fab {
   width: 58px;
   height: 58px;
@@ -115,6 +112,13 @@
 }
 .fab-quote {
   background: linear-gradient(135deg, #2b636a, #1c575d);
+}
+.fab-compare {
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  background: linear-gradient(135deg, #6b4226, #4a2c1f);
+  color: #fff;
 }
 .fab .material-symbols-outlined {
   font-size: 28px;
@@ -475,6 +479,174 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-zoom-media:hover .hero-carousel-slide.is-active img {
+    transform: none;
+  }
+}
+
+/* ------- Modal comparativo Ruta 5 vs PDF Colegio Mayor ------- */
+.mm-compare-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10050;
+  background: rgba(23, 37, 57, 0.45);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease;
+}
+.mm-compare-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mm-compare-dialog {
+  width: min(100%, 52rem);
+  max-height: min(92vh, 900px);
+  background: #fbf6ee;
+  border-radius: 1.25rem;
+  box-shadow: 0 28px 80px rgba(23, 37, 57, 0.28);
+  border: 1px solid rgba(43, 99, 106, 0.18);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateY(12px) scale(0.98);
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.mm-compare-backdrop.is-open .mm-compare-dialog {
+  transform: none;
+}
+.mm-compare-dialog-head {
+  position: relative;
+  padding: 1.1rem 3rem 1rem 1.25rem;
+  background: linear-gradient(135deg, #2b636a, #1c575d);
+  color: #d2faff;
+  flex-shrink: 0;
+}
+.mm-compare-title {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.02em;
+}
+.mm-compare-sub {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  opacity: 0.95;
+  max-width: 42rem;
+}
+.mm-compare-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.mm-compare-close:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: scale(1.06);
+}
+.mm-compare-body {
+  padding: 1rem 1.25rem 1.25rem;
+  color: #302f2a;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.mm-compare-note {
+  font-size: 0.85rem;
+  color: #5e5b55;
+  margin: 0 0 0.75rem;
+  line-height: 1.45;
+}
+.mm-compare-scroll {
+  overflow: auto;
+  flex: 1;
+  -webkit-overflow-scrolling: touch;
+}
+.mm-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+.mm-compare-table th,
+.mm-compare-table td {
+  border: 1px solid rgba(43, 99, 106, 0.2);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+.mm-compare-table thead th {
+  background: #e7f95e;
+  color: #555d00;
+  font-weight: 800;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.mm-compare-table tbody tr:nth-child(even) td:not(.mm-compare-merge) {
+  background: rgba(255, 255, 255, 0.65);
+}
+.mm-compare-merge {
+  background: rgba(174, 231, 237, 0.35);
+  line-height: 1.45;
+  font-size: 0.78rem;
+}
+.mm-compare-total td {
+  background: rgba(43, 99, 106, 0.1);
+  font-size: 0.85rem;
+}
+.mm-compare-tag {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b4226;
+}
+.mm-compare-h3 {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin: 1rem 0 0.35rem;
+  color: #1c575d;
+}
+.mm-compare-small {
+  font-size: 0.78rem;
+  color: #5e5b55;
+  margin: 0 0 0.5rem;
+}
+.mm-compare-table--narrow {
+  max-width: 28rem;
+}
+.mm-compare-foot {
+  font-size: 0.72rem;
+  color: #5e5b55;
+  line-height: 1.45;
+  margin: 0.75rem 0 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .mm-compare-backdrop,
+  .mm-compare-dialog {
+    transition: none;
+  }
+  .mm-compare-backdrop.is-open .mm-compare-dialog {
     transform: none;
   }
 }

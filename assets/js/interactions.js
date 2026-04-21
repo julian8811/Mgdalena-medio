@@ -16,6 +16,7 @@
     mountNavHighlight();
     mountHeaderScroll();
     mountParallaxDecor();
+    mountCompareModal();
   }
 
   // ------- Scroll reveal -------
@@ -163,13 +164,16 @@
     }, { passive: true });
   }
 
-  // ------- FAB flotante (solo cotización) -------
+  // ------- FAB flotante (comparativo + cotización) -------
   function mountFabDock() {
     if (document.body.hasAttribute("data-no-fab")) return;
     if (document.querySelector(".fab-dock")) return;
     var dock = document.createElement("div");
-    dock.className = "fab-dock fab-dock--single";
+    dock.className = "fab-dock";
     dock.innerHTML = ''
+      + '<button type="button" class="fab fab-compare" data-open-mm-compare data-tooltip="Comparativo Ruta 5 vs Colegio Mayor" aria-haspopup="dialog" aria-controls="mm-compare-dialog" aria-expanded="false">'
+      +   '<span class="material-symbols-outlined">compare_arrows</span>'
+      + '</button>'
       + '<a class="fab fab-quote" data-tooltip="Ver cotización" href="cotizacion.html">'
       +   '<span class="material-symbols-outlined">request_quote</span>'
       + '</a>';
@@ -233,6 +237,124 @@
     }
     document.addEventListener("scroll", onScroll, { passive: true });
     update();
+  }
+
+  // ------- Modal comparativo Ruta 5 vs cotización Colegio Mayor (PDF) -------
+  function mountCompareModal() {
+    if (document.getElementById("mm-compare-backdrop")) return;
+    var backdrop = document.createElement("div");
+    backdrop.id = "mm-compare-backdrop";
+    backdrop.className = "mm-compare-backdrop";
+    backdrop.setAttribute("aria-hidden", "true");
+    backdrop.innerHTML = ''
+      + '<div class="mm-compare-dialog" id="mm-compare-dialog" role="dialog" aria-modal="true" aria-labelledby="mm-compare-title" tabindex="-1">'
+      +   '<div class="mm-compare-dialog-head">'
+      +     '<h2 id="mm-compare-title" class="mm-compare-title">Comparativo por persona</h2>'
+      +     '<p class="mm-compare-sub">Ruta 5 — Ruta completa (Puerto Berrío y Maceo, informe referencial) frente a la cotización <strong>Misión de aprendizaje — Colegio Mayor de Antioquia</strong> (Yopal / Casanare, PDF «Cotización Colegio Mayor de Antioquia 2 Final», marzo 2026).</p>'
+      +     '<button type="button" class="mm-compare-close" aria-label="Cerrar comparativo"><span class="material-symbols-outlined">close</span></button>'
+      +   '</div>'
+      +   '<div class="mm-compare-body">'
+      +     '<p class="mm-compare-note">Son productos y destinos distintos; la tabla contrasta montos <em>por una persona</em> donde el informe da rangos referenciales y el PDF aporta totales de grupo prorrateados.</p>'
+      +     '<div class="mm-compare-scroll">'
+      +       '<table class="mm-compare-table">'
+      +         '<thead><tr><th>Rubro</th><th>Ruta 5 completa (1 pax, COP)</th><th>Cotización Colegio Mayor (1 pax, COP)</th></tr></thead>'
+      +         '<tbody>'
+      +           '<tr><td>Transporte ida y vuelta (bus según informe)</td><td>$76.000 – $102.000</td><td rowspan="5" class="mm-compare-merge">Servicios terrestres, alojamiento, alimentación, actividades académicas, safari llanero, guianza y asistencia al viajero integrados en el paquete. <strong>El PDF no discrimina por rubro en pesos por persona.</strong></td></tr>'
+      +           '<tr><td>Traslados internos (todos los tramos)</td><td>$280.000 – $450.000</td></tr>'
+      +           '<tr><td>Alojamiento (4 noches hotel + 1 Ecorrefugio)</td><td>$480.000 – $750.000</td></tr>'
+      +           '<tr><td>Comidas (5 D, 5 A, 5 C)</td><td>$220.000 – $380.000</td></tr>'
+      +           '<tr><td>Actividades (balneario, histórico, Ciénaga, Ecorrefugio, ganadería, Bedout)</td><td>$250.000 – $400.000</td></tr>'
+      +           '<tr class="mm-compare-total"><td><strong>Total referencial por persona</strong></td><td><strong>$1.306.000 – $2.082.000</strong></td><td><strong>$4.098.899</strong> <span class="mm-compare-tag">venta x persona, IVA incl.</span></td></tr>'
+      +         '</tbody>'
+      +       '</table>'
+      +       '<h3 class="mm-compare-h3">Discriminación gravamen (solo PDF, 1 persona)</h3>'
+      +       '<p class="mm-compare-small">Calculado a partir del subtotal e IVA del documento y un grupo de <strong>20</strong> personas (total viaje $81.977.980).</p>'
+      +       '<table class="mm-compare-table mm-compare-table--narrow">'
+      +         '<thead><tr><th>Concepto (PDF)</th><th>COP / persona</th></tr></thead>'
+      +         '<tbody>'
+      +           '<tr><td>Subtotal (antes de IVA) prorrateado</td><td>$3.444.453</td></tr>'
+      +           '<tr><td>IVA 19% prorrateado</td><td>$654.446</td></tr>'
+      +           '<tr class="mm-compare-total"><td><strong>Total venta por persona</strong></td><td><strong>$4.098.899</strong></td></tr>'
+      +         '</tbody>'
+      +       '</table>'
+      +       '<p class="mm-compare-foot">Fuente PDF: cotización N° 030, 03 de marzo de 2026, operador Exclusive Nature Tours (Yopal). Tiquetes aéreos ciudad de origen–destino <strong>no</strong> incluidos en la propuesta PDF. Ruta 5 según tabla «Paquete 5» en la página de cotización del sitio.</p>'
+      +     '</div>'
+      +   '</div>'
+      + '</div>';
+    document.body.appendChild(backdrop);
+
+    var dialog = backdrop.querySelector(".mm-compare-dialog");
+    var closeBtn = backdrop.querySelector(".mm-compare-close");
+    function getOpenTrigger() {
+      return document.querySelector("[data-open-mm-compare]");
+    }
+
+    function tabbable() {
+      if (!dialog) return [];
+      var sel = dialog.querySelectorAll("button, [href], input, select, textarea, [tabindex]:not([tabindex=\"-1\"])");
+      return Array.prototype.slice.call(sel).filter(function (el) {
+        return !el.hasAttribute("disabled") && el.offsetParent !== null;
+      });
+    }
+
+    function openModal() {
+      backdrop.classList.add("is-open");
+      backdrop.setAttribute("aria-hidden", "false");
+      var b = getOpenTrigger();
+      if (b) b.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
+      if (closeBtn) closeBtn.focus();
+      document.addEventListener("keydown", onKeyDoc, true);
+    }
+
+    function closeModal() {
+      backdrop.classList.remove("is-open");
+      backdrop.setAttribute("aria-hidden", "true");
+      var b = getOpenTrigger();
+      if (b) {
+        b.setAttribute("aria-expanded", "false");
+        b.focus();
+      }
+      document.body.style.overflow = "";
+      document.removeEventListener("keydown", onKeyDoc, true);
+    }
+
+    function onKeyDoc(e) {
+      if (!backdrop.classList.contains("is-open")) return;
+      if (e.key === "Escape") {
+        e.preventDefault();
+        closeModal();
+        return;
+      }
+      if (e.key !== "Tab" || !dialog) return;
+      var list = tabbable();
+      if (list.length === 0) return;
+      var first = list[0];
+      var last = list[list.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+
+    document.addEventListener("click", function (e) {
+      if (e.target.closest && e.target.closest("[data-open-mm-compare]")) {
+        e.preventDefault();
+        openModal();
+        return;
+      }
+      if (e.target.closest && e.target.closest(".mm-compare-close")) {
+        e.preventDefault();
+        closeModal();
+        return;
+      }
+      if (backdrop.classList.contains("is-open") && e.target === backdrop) {
+        closeModal();
+      }
+    });
   }
 
   // ------- Carrusel hero (index) -------
