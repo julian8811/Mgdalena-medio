@@ -248,7 +248,7 @@
       + '<div class="mm-compare-dialog" id="mm-compare-dialog" role="dialog" aria-modal="true" aria-labelledby="mm-compare-title" tabindex="-1">'
       +   '<div class="mm-compare-dialog-head">'
       +     '<h2 id="mm-compare-title" class="mm-compare-title">Comparativo por persona</h2>'
-      +     '<p class="mm-compare-sub">Ruta 5 — Ruta completa (Puerto Berrío y Maceo, informe referencial) frente a la cotización <strong>Misión de aprendizaje — Colegio Mayor de Antioquia</strong> (Yopal / Casanare, PDF «Cotización Colegio Mayor de Antioquia 2 Final», marzo 2026).</p>'
+      +     '<p class="mm-compare-sub">Comparativo ruta 5 completa vs Ruta Yopal / Casanare Exclusive Nature Tours.</p>'
       +     '<button type="button" class="mm-compare-close" aria-label="Cerrar comparativo"><span class="material-symbols-outlined">close</span></button>'
       +   '</div>'
       +   '<div class="mm-compare-body">'
