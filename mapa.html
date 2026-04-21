@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="assets/css/theme.css"/>
 <link rel="stylesheet" href="assets/css/interactions.css"/>
+<link rel="stylesheet" href="assets/css/map-page.css"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script>
 tailwind.config = { darkMode: "class", theme: { extend: {
@@ -21,8 +22,6 @@ tailwind.config = { darkMode: "class", theme: { extend: {
 </script>
 <style>
 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-#mapa-rutas { width: 100%; height: min(70vh, 520px); border-radius: 1.25rem; background: #e8ede5; box-shadow: 0 12px 40px rgba(23,37,57,0.12); border: 1px solid rgba(25,85,91,0.12); }
-.leaflet-popup-content-wrapper { border-radius: 12px; }
 </style>
 <script defer src="assets/js/site.js"></script>
 <script defer src="assets/js/interactions.js"></script>
@@ -47,24 +46,36 @@ tailwind.config = { darkMode: "class", theme: { extend: {
 </header>
 
 <main class="pt-20 pb-16 px-4 md:px-6 max-w-6xl mx-auto">
+<div class="map-page-intro reveal mb-8">
 <h1 class="text-3xl md:text-4xl font-extrabold font-headline text-on-surface mb-2">Rutas en mapa</h1>
-<p class="text-on-surface-variant mb-6 max-w-2xl">Selecciona una ruta. Cada marcador muestra el descriptor del punto. Datos georreferenciados del informe.</p>
+<p class="text-on-surface-variant max-w-2xl leading-relaxed">Mapa base en color tipo <strong class="text-primary font-semibold">Voyager</strong> (CARTO): calles, relieve y agua se leen mejor. Cada ruta traza una línea con resplandor y puntos con marcador circular. Pulsa un marcador para ver descripción, experiencia y costos referenciales.</p>
+</div>
 
-<div id="mapa-rutas" class="shadow-[0_8px_24px_rgba(48,47,42,0.08)] mb-6 ring-1 ring-black/5"></div>
+<div class="map-stage mb-7 reveal" data-delay="80">
+<div class="map-stage-inner">
+<div id="mapa-rutas" aria-label="Mapa interactivo de rutas"></div>
+<div class="map-floating-badge">
+<span class="material-symbols-outlined" aria-hidden="true">explore</span>
+Puerto Berrío · Maceo
+</div>
+</div>
+</div>
 
-<div class="flex flex-wrap gap-2">
-<button type="button" data-ruta="1" class="px-4 py-2 rounded-full text-sm font-bold bg-primary text-on-primary ring-2 ring-primary ring-offset-2 ring-offset-surface">Ruta 1 · Esencial</button>
-<button type="button" data-ruta="2" class="px-4 py-2 rounded-full text-sm font-bold bg-surface-container-lowest text-on-surface border border-black/10">Ruta 2 · Balneario</button>
-<button type="button" data-ruta="3" class="px-4 py-2 rounded-full text-sm font-bold bg-surface-container-lowest text-on-surface border border-black/10">Ruta 3 · Histórica</button>
-<button type="button" data-ruta="4" class="px-4 py-2 rounded-full text-sm font-bold bg-surface-container-lowest text-on-surface border border-black/10">Ruta 4 · Ganadera</button>
-<button type="button" data-ruta="5" class="px-4 py-2 rounded-full text-sm font-bold bg-surface-container-lowest text-on-surface border border-black/10">Ruta 5 · Completa</button>
-<button type="button" data-ruta="6" class="px-4 py-2 rounded-full text-sm font-bold bg-surface-container-lowest text-on-surface border border-black/10">Ruta 1 · Cocreación ganadera</button>
-<button type="button" data-ruta="7" class="px-4 py-2 rounded-full text-sm font-bold bg-surface-container-lowest text-on-surface border border-black/10">Ruta 2 · Cocreación histórica</button>
+<div class="map-route-toolbar reveal" data-delay="140">
+<div class="map-route-scroll" role="group" aria-label="Elegir ruta en el mapa">
+<button type="button" data-ruta="1" class="map-route-btn is-active" aria-pressed="true"><span class="route-dot" aria-hidden="true"></span>Ruta 1 · Esencial</button>
+<button type="button" data-ruta="2" class="map-route-btn" aria-pressed="false"><span class="route-dot" aria-hidden="true"></span>Ruta 2 · Balneario</button>
+<button type="button" data-ruta="3" class="map-route-btn" aria-pressed="false"><span class="route-dot" aria-hidden="true"></span>Ruta 3 · Histórica</button>
+<button type="button" data-ruta="4" class="map-route-btn" aria-pressed="false"><span class="route-dot" aria-hidden="true"></span>Ruta 4 · Ganadera</button>
+<button type="button" data-ruta="5" class="map-route-btn" aria-pressed="false"><span class="route-dot" aria-hidden="true"></span>Ruta 5 · Completa</button>
+<button type="button" data-ruta="6" class="map-route-btn" aria-pressed="false"><span class="route-dot" aria-hidden="true"></span>Ruta 1 · Cocreación ganadera</button>
+<button type="button" data-ruta="7" class="map-route-btn" aria-pressed="false"><span class="route-dot" aria-hidden="true"></span>Ruta 2 · Cocreación histórica</button>
+</div>
 </div>
 <p class="mt-6 text-sm text-on-surface-variant"><a href="directorio.html" class="text-primary font-semibold hover:underline">Directorio de puntos</a> · <a href="cotizacion.html" class="text-primary font-semibold hover:underline">Cotización</a></p>
 </main>
 
-<footer class="site-footer text-white text-center py-8 px-4 text-sm">Mapa © OpenStreetMap · Magdalena Medio</footer>
+<footer class="site-footer text-white text-center py-8 px-4 text-sm">Mapa © OpenStreetMap · CARTO · Magdalena Medio</footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="assets/js/rutas-data.js"></script>
