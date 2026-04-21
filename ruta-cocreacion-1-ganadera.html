@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="assets/css/theme.css"/>
+<link rel="stylesheet" href="assets/css/interactions.css"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{primary:"#2b636a","on-primary":"#d2faff",surface:"#fbf6ee","on-surface":"#302f2a","on-surface-variant":"#5e5b55","surface-container-low":"#f5f0e8",tertiary:"#576100"}}}}</script>
 <style>.material-symbols-outlined{font-variation-settings:'FILL'0,'wght'400,'GRAD'0,'opsz'24}
@@ -16,8 +17,9 @@
 .itin-table tr:nth-child(even) td{background:#fbf6ee}
 </style>
 <script defer src="assets/js/site.js"></script>
+<script defer src="assets/js/interactions.js"></script>
 </head>
-<body class="text-on-surface pb-24">
+<body class="text-on-surface pb-24" data-progress>
 <header class="site-header fixed top-0 w-full z-50 bg-[#fbf6ee]/85 backdrop-blur-md flex items-center gap-2 px-4 h-16">
 <a href="cocreacion-rutas-ganaderas.html" class="text-[#19555B] p-2 rounded-full hover:bg-black/5"><span class="material-symbols-outlined">arrow_back</span></a>
 <a href="index.html" class="brand-mark">
@@ -50,49 +52,55 @@
 </div>
 </div>
 
-<section class="mb-10">
-<h2 class="text-2xl font-extrabold text-on-surface mb-4 font-['Plus_Jakarta_Sans']">Día 1 · Finca Las Camelias</h2>
-<div class="overflow-x-auto"><table class="itin-table"><thead><tr><th>Horario</th><th>Actividad</th><th>Lugar</th></tr></thead><tbody>
-<tr><td>6:00 a. m.</td><td>Ordeño</td><td>Finca Las Camelias</td></tr>
-<tr><td>7:30 a. m.</td><td>Desayuno tradicional</td><td>Finca Las Camelias</td></tr>
-<tr><td>8:00 a. m.</td><td>Paseo a caballo por campos y paisajes ganaderos. Historia de fincas en contexto ganadero.</td><td>Finca Las Camelias</td></tr>
-<tr><td>12:00 m.</td><td>Almuerzo ganadero (sancocho trifásico)</td><td>Finca Las Camelias</td></tr>
-<tr><td>2:00 p. m.</td><td>Retorno</td><td>Puerto Berrío</td></tr>
-<tr><td>3:00 p. m.</td><td>Compras para llevar</td><td>Puerto Berrío</td></tr>
-</tbody></table></div>
-</section>
+<section class="mb-10 reveal" data-day-tabs>
+<h2 class="text-2xl font-extrabold text-on-surface mb-4 font-['Plus_Jakarta_Sans']">Itinerario día a día</h2>
+<div class="day-tabs" role="tablist">
+  <button class="day-tab is-active" type="button" data-target="#d1">Día 1 · Las Camelias</button>
+  <button class="day-tab" type="button" data-target="#d2">Día 2 · San Juan de Bedout</button>
+  <button class="day-tab" type="button" data-target="#d3">Día 3 · Hacienda La Tagua</button>
+</div>
 
-<section class="mb-10">
-<h2 class="text-2xl font-extrabold text-on-surface mb-4 font-['Plus_Jakarta_Sans']">Día 2 · San Juan de Bedout</h2>
-<div class="overflow-x-auto"><table class="itin-table"><thead><tr><th>Horario</th><th>Actividad</th><th>Lugar</th><th>Valor turístico</th></tr></thead><tbody>
-<tr><td>8:00 a. m.</td><td>Desayuno</td><td>La Alpina / El Portal</td><td>Transferencia de conocimiento</td></tr>
-<tr><td>10:30 a. m.</td><td>Caracterización de la finca</td><td>San Juan de Bedout</td><td>Historia sobre ganadería</td></tr>
-<tr><td>11:30 a. m.</td><td>Recorrido por instalaciones</td><td>San Juan de Bedout</td><td>Inducción y bioseguridad</td></tr>
-<tr><td>1:00 p. m.</td><td>Almuerzo típico</td><td>San Juan de Bedout</td><td>Placer gastronómico</td></tr>
-<tr><td>2:00 p. m.</td><td>Visita a establos</td><td>San Juan de Bedout</td><td>Razas cebuinas</td></tr>
-<tr><td>3:15 p. m.</td><td>Salida de campo con vaqueros</td><td>San Juan de Bedout</td><td>Producción ganadera</td></tr>
-<tr><td>5:00 p. m.</td><td>Refrigerio</td><td>San Juan de Bedout</td><td>Productos de la región</td></tr>
-<tr><td>5:30 p. m.</td><td>Regreso a Puerto Berrío</td><td>—</td><td>—</td></tr>
-<tr><td>6:30 p. m.</td><td>Instalación en hotel</td><td>Casa del Río / San Diego</td><td>Espacios confortables</td></tr>
-<tr><td>7:30 p. m.</td><td>Cena</td><td>Colbúfala / Casa Vieja / El Portal / La Martina</td><td>Variedad gastronómica</td></tr>
-</tbody></table></div>
-</section>
+<div id="d1" class="day-panel is-active">
+  <div class="timeline">
+    <div class="timeline-item"><span class="t-time">6:00 a. m.</span><p class="t-title">Ordeño</p><p class="t-meta"><strong>Finca Las Camelias.</strong> Inicio con experiencia de campo auténtica.</p></div>
+    <div class="timeline-item"><span class="t-time">7:30 a. m.</span><p class="t-title">Desayuno tradicional</p><p class="t-meta"><strong>Finca Las Camelias.</strong> Productos locales y cocina regional.</p></div>
+    <div class="timeline-item"><span class="t-time">8:00 a. m.</span><p class="t-title">Paseo a caballo</p><p class="t-meta">Campos y paisajes ganaderos, con interpretación histórica en contexto.</p></div>
+    <div class="timeline-item"><span class="t-time">12:00 m.</span><p class="t-title">Almuerzo ganadero</p><p class="t-meta">Sancocho trifásico tradicional.</p></div>
+    <div class="timeline-item"><span class="t-time">2:00 p. m.</span><p class="t-title">Retorno a Puerto Berrío</p></div>
+    <div class="timeline-item"><span class="t-time">3:00 p. m.</span><p class="t-title">Compras para llevar</p><p class="t-meta">Productos artesanales y souvenirs.</p></div>
+  </div>
+</div>
 
-<section class="mb-10">
-<h2 class="text-2xl font-extrabold text-on-surface mb-4 font-['Plus_Jakarta_Sans']">Día 3 · Hacienda La Tagua</h2>
-<div class="overflow-x-auto"><table class="itin-table"><thead><tr><th>Horario</th><th>Actividad</th><th>Lugar</th></tr></thead><tbody>
-<tr><td>6:00 a. m.</td><td>Salida hacia la finca</td><td>Hotel – Hacienda La Tagua</td></tr>
-<tr><td>6:30 a. m.</td><td>Llegada y ordeño</td><td>Corrales Hacienda La Tagua</td></tr>
-<tr><td>7:30 a. m.</td><td>Desayuno</td><td>Hacienda La Tagua</td></tr>
-<tr><td>8:30 a. m.</td><td>Introducción de la empresa</td><td>Hacienda La Tagua</td></tr>
-<tr><td>9:30 a. m.</td><td>Salida a caballo y manejo de campo</td><td>Potreros Hacienda La Tagua</td></tr>
-<tr><td>11:30 a. m.</td><td>Refrigerio e hidratación</td><td>Instalaciones Hacienda La Tagua</td></tr>
-<tr><td>12:30 p. m.</td><td>Desplazamiento a caballo al río</td><td>Quebrada La Malena</td></tr>
-<tr><td>1:00 p. m.</td><td>Almuerzo fiambre de vaquero</td><td>Quebrada La Malena</td></tr>
-<tr><td>2:30 p. m.</td><td>Desplazamiento a la casa</td><td>Hacienda La Tagua</td></tr>
-<tr><td>3:00 p. m.</td><td>Salida a Puerto Berrío</td><td>Puerto Berrío</td></tr>
-<tr><td>4:00 p. m.</td><td>Tour por Puerto Berrío y cierre</td><td>Puerto Berrío</td></tr>
-</tbody></table></div>
+<div id="d2" class="day-panel">
+  <div class="timeline">
+    <div class="timeline-item"><span class="t-time">8:00 a. m.</span><p class="t-title">Desayuno</p><p class="t-meta"><strong>La Alpina o El Portal.</strong> Transferencia de conocimiento.</p></div>
+    <div class="timeline-item"><span class="t-time">10:30 a. m.</span><p class="t-title">Caracterización de la finca</p><p class="t-meta">Historia sobre la ganadería en el territorio.</p></div>
+    <div class="timeline-item"><span class="t-time">11:30 a. m.</span><p class="t-title">Recorrido por instalaciones</p><p class="t-meta">Inducción y protocolos de bioseguridad.</p></div>
+    <div class="timeline-item"><span class="t-time">1:00 p. m.</span><p class="t-title">Almuerzo típico</p><p class="t-meta">Placer gastronómico con platos regionales.</p></div>
+    <div class="timeline-item"><span class="t-time">2:00 p. m.</span><p class="t-title">Visita a establos</p><p class="t-meta">Razas cebuinas.</p></div>
+    <div class="timeline-item"><span class="t-time">3:15 p. m.</span><p class="t-title">Salida de campo con vaqueros</p><p class="t-meta">Producción ganadera en vivo.</p></div>
+    <div class="timeline-item"><span class="t-time">5:00 p. m.</span><p class="t-title">Refrigerio</p><p class="t-meta">Productos de la región.</p></div>
+    <div class="timeline-item"><span class="t-time">5:30 p. m.</span><p class="t-title">Regreso a Puerto Berrío</p></div>
+    <div class="timeline-item"><span class="t-time">6:30 p. m.</span><p class="t-title">Instalación en hotel</p><p class="t-meta"><strong>Casa del Río</strong> o <strong>Apartahotel San Diego.</strong></p></div>
+    <div class="timeline-item"><span class="t-time">7:30 p. m.</span><p class="t-title">Cena</p><p class="t-meta">Colbúfala, Casa Vieja, El Portal o La Martina.</p></div>
+  </div>
+</div>
+
+<div id="d3" class="day-panel">
+  <div class="timeline">
+    <div class="timeline-item"><span class="t-time">6:00 a. m.</span><p class="t-title">Salida hacia la finca</p><p class="t-meta">Hotel – Hacienda La Tagua.</p></div>
+    <div class="timeline-item"><span class="t-time">6:30 a. m.</span><p class="t-title">Llegada y ordeño</p><p class="t-meta">Corrales Hacienda La Tagua.</p></div>
+    <div class="timeline-item"><span class="t-time">7:30 a. m.</span><p class="t-title">Desayuno</p></div>
+    <div class="timeline-item"><span class="t-time">8:30 a. m.</span><p class="t-title">Introducción de la empresa</p></div>
+    <div class="timeline-item"><span class="t-time">9:30 a. m.</span><p class="t-title">Salida a caballo · manejo de campo</p><p class="t-meta">Potreros Hacienda La Tagua.</p></div>
+    <div class="timeline-item"><span class="t-time">11:30 a. m.</span><p class="t-title">Refrigerio e hidratación</p></div>
+    <div class="timeline-item"><span class="t-time">12:30 p. m.</span><p class="t-title">Desplazamiento a caballo al río</p><p class="t-meta">Quebrada La Malena.</p></div>
+    <div class="timeline-item"><span class="t-time">1:00 p. m.</span><p class="t-title">Almuerzo fiambre de vaquero</p></div>
+    <div class="timeline-item"><span class="t-time">2:30 p. m.</span><p class="t-title">Desplazamiento a la casa</p></div>
+    <div class="timeline-item"><span class="t-time">3:00 p. m.</span><p class="t-title">Salida a Puerto Berrío</p></div>
+    <div class="timeline-item"><span class="t-time">4:00 p. m.</span><p class="t-title">Tour por Puerto Berrío y cierre</p></div>
+  </div>
+</div>
 </section>
 
 </main>
