@@ -12,6 +12,7 @@
     mountBackToTop();
     mountFabDock();
     mountRipple();
+    mountHeroCarousel();
   }
 
   // ------- Scroll reveal -------
@@ -173,6 +174,85 @@
       +   '<span class="material-symbols-outlined">request_quote</span>'
       + '</a>';
     document.body.appendChild(dock);
+  }
+
+  // ------- Carrusel hero (index) -------
+  function mountHeroCarousel() {
+    var root = document.querySelector("[data-hero-carousel]");
+    if (!root) return;
+    var slides = root.querySelectorAll(".hero-carousel-slide");
+    var dots = root.querySelectorAll(".hero-carousel-dot");
+    var prev = root.querySelector(".hero-carousel-prev");
+    var next = root.querySelector(".hero-carousel-next");
+    var n = slides.length;
+    if (!n) return;
+    var i = 0;
+    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var ms = parseInt(root.getAttribute("data-autoplay-ms") || "6000", 10);
+    var timer = null;
+
+    function go(idx) {
+      i = (idx + n) % n;
+      slides.forEach(function (s, j) {
+        s.classList.toggle("is-active", j === i);
+      });
+      dots.forEach(function (d, j) {
+        var on = j === i;
+        d.classList.toggle("is-active", on);
+        if (on) d.setAttribute("aria-current", "true");
+        else d.removeAttribute("aria-current");
+      });
+    }
+
+    function nextSlide() {
+      go(i + 1);
+    }
+    function prevSlide() {
+      go(i - 1);
+    }
+
+    function arm() {
+      clearInterval(timer);
+      if (reduced || ms < 1500) return;
+      timer = setInterval(nextSlide, ms);
+    }
+    function disarm() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    if (prev) {
+      prev.addEventListener("click", function () {
+        disarm();
+        prevSlide();
+        arm();
+      });
+    }
+    if (next) {
+      next.addEventListener("click", function () {
+        disarm();
+        nextSlide();
+        arm();
+      });
+    }
+    dots.forEach(function (dot, j) {
+      dot.addEventListener("click", function () {
+        disarm();
+        go(j);
+        arm();
+      });
+    });
+    root.addEventListener("mouseenter", disarm);
+    root.addEventListener("mouseleave", arm);
+    root.addEventListener("focusin", disarm);
+    root.addEventListener("focusout", function (e) {
+      if (!root.contains(e.relatedTarget)) arm();
+    });
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) disarm();
+      else arm();
+    });
+    arm();
   }
 
   // ------- Ripple en botones -------

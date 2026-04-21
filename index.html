@@ -70,8 +70,27 @@ h1,h2,h3 { font-family: "Plus Jakarta Sans", sans-serif; }
 </div>
 </div>
 <div class="lg:col-span-5 relative reveal" data-reveal="right" data-delay="200">
-<div class="photo-frame relative aspect-[4/5] md:aspect-square rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
-<img alt="Rebaño bovino en pastizal — turismo rural" class="img-cover relative z-0" src="assets/images/home-hero.png"/>
+<div class="photo-frame photo-frame--clean relative aspect-[4/5] md:aspect-square rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
+<div class="hero-carousel" data-hero-carousel data-autoplay-ms="5600" aria-roledescription="carrusel" aria-label="Imágenes del paisaje ganadero">
+<div class="hero-carousel-slides">
+<div class="hero-carousel-slide is-active"><img src="assets/images/home-hero.png" alt="Paisaje ganadero: rebaño y territorio rural" width="800" height="1000" decoding="async"/></div>
+<div class="hero-carousel-slide"><img src="assets/images/section-potrero.png" alt="Ganado en potrero al atardecer" width="800" height="1000" decoding="async"/></div>
+<div class="hero-carousel-slide"><img src="assets/images/3.png" alt="Ribera y entorno fluvial" width="800" height="600" decoding="async"/></div>
+<div class="hero-carousel-slide"><img src="assets/images/8.png" alt="Finca y actividades ganaderas" width="800" height="600" decoding="async"/></div>
+<div class="hero-carousel-slide"><img src="assets/images/10.png" alt="Valle, río y paisaje del Magdalena Medio" width="800" height="600" decoding="async"/></div>
+</div>
+<div class="hero-carousel-nav">
+<button type="button" class="hero-carousel-arrow hero-carousel-prev" aria-label="Imagen anterior"><span class="material-symbols-outlined" aria-hidden="true">chevron_left</span></button>
+<button type="button" class="hero-carousel-arrow hero-carousel-next" aria-label="Imagen siguiente"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></button>
+</div>
+<div class="hero-carousel-dots" role="group" aria-label="Seleccionar imagen">
+<button type="button" class="hero-carousel-dot is-active" aria-current="true" aria-label="Imagen 1 de 5"></button>
+<button type="button" class="hero-carousel-dot" aria-label="Imagen 2 de 5"></button>
+<button type="button" class="hero-carousel-dot" aria-label="Imagen 3 de 5"></button>
+<button type="button" class="hero-carousel-dot" aria-label="Imagen 4 de 5"></button>
+<button type="button" class="hero-carousel-dot" aria-label="Imagen 5 de 5"></button>
+</div>
+</div>
 </div>
 <div class="absolute -bottom-5 left-3 right-3 sm:left-4 sm:right-4 md:inset-x-auto md:-left-10 md:right-auto md:w-[min(100%,28rem)] stat-chip p-6 md:p-7 rounded-2xl shadow-xl grid grid-cols-3 gap-6 md:gap-10 z-20 min-w-0">
 <div class="text-center min-w-0 px-1"><p class="text-2xl md:text-3xl font-black text-primary leading-none tabular-nums whitespace-nowrap count-up" data-count-to="7">0</p><p class="text-[9px] uppercase tracking-wider font-bold text-gray-500 mt-1.5">Rutas</p></div>
