@@ -613,6 +613,15 @@
   color: #1c575d;
   font-size: 0.8rem;
 }
+.mm-compare-itin-meta {
+  margin: 0 0 0.55rem;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  color: #5e5b55;
+}
+.mm-compare-itin-list + .mm-compare-itin-meta {
+  margin-top: 0.45rem;
+}
 .mm-compare-itin-day {
   margin: 0.55rem 0 0.2rem;
   font-size: 0.7rem;
