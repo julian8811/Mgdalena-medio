@@ -607,6 +607,35 @@
   line-height: 1.45;
   font-size: 0.78rem;
 }
+.mm-compare-itin-lead {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  color: #1c575d;
+  font-size: 0.8rem;
+}
+.mm-compare-itin-day {
+  margin: 0.55rem 0 0.2rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #2b636a;
+}
+.mm-compare-itin-list {
+  margin: 0 0 0 1rem;
+  padding: 0;
+  list-style: disc;
+}
+.mm-compare-itin-list li {
+  margin: 0.12rem 0;
+}
+.mm-compare-itin-note {
+  margin: 0.65rem 0 0;
+  padding-top: 0.5rem;
+  border-top: 1px dashed rgba(43, 99, 106, 0.25);
+  font-size: 0.72rem;
+  color: #4a4844;
+}
 .mm-compare-total td {
   background: rgba(43, 99, 106, 0.1);
   font-size: 0.85rem;
