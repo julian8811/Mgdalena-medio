@@ -164,19 +164,17 @@
     }, { passive: true });
   }
 
-  // ------- FAB flotante (comparativo + cotización) -------
+  // ------- FAB flotante (solo comparativo) -------
   function mountFabDock() {
     if (document.body.hasAttribute("data-no-fab")) return;
     if (document.querySelector(".fab-dock")) return;
     var dock = document.createElement("div");
-    dock.className = "fab-dock";
+    dock.className = "fab-dock fab-dock--compare-only";
     dock.innerHTML = ''
-      + '<button type="button" class="fab fab-compare" data-open-mm-compare data-tooltip="Comparativo Ruta 5 vs Exclusive Nature Tours" aria-haspopup="dialog" aria-controls="mm-compare-dialog" aria-expanded="false">'
-      +   '<span class="material-symbols-outlined">compare_arrows</span>'
-      + '</button>'
-      + '<a class="fab fab-quote" data-tooltip="Ver cotización" href="cotizacion.html">'
-      +   '<span class="material-symbols-outlined">request_quote</span>'
-      + '</a>';
+      + '<button type="button" class="fab fab-compare" data-open-mm-compare data-tooltip="Comparar Ruta 5 (Magdalena Medio) vs cotización Yopal (PDF)" aria-haspopup="dialog" aria-controls="mm-compare-dialog" aria-expanded="false" aria-label="Abrir comparativo: Ruta 5 completa frente a cotización Exclusive Nature Tours (1 persona)">'
+      +   '<span class="material-symbols-outlined" aria-hidden="true">compare_arrows</span>'
+      +   '<span class="fab-compare-label">Comparar</span>'
+      + '</button>';
     document.body.appendChild(dock);
   }
 
@@ -313,17 +311,6 @@
       +           '<tr class="mm-compare-total"><td><strong>Total referencial por persona</strong></td><td><strong>$1.306.000 – $2.082.000</strong></td><td><strong>$4.098.899</strong> <span class="mm-compare-tag">venta x persona, IVA incl.</span></td></tr>'
       +         '</tbody>'
       +       '</table>'
-      +       '<h3 class="mm-compare-h3">Discriminación gravamen (solo PDF, 1 persona)</h3>'
-      +       '<p class="mm-compare-small">Calculado a partir del subtotal e IVA del documento y un grupo de <strong>20</strong> personas (total viaje $81.977.980).</p>'
-      +       '<table class="mm-compare-table mm-compare-table--narrow">'
-      +         '<thead><tr><th>Concepto (PDF)</th><th>COP / persona</th></tr></thead>'
-      +         '<tbody>'
-      +           '<tr><td>Subtotal (antes de IVA) prorrateado</td><td>$3.444.453</td></tr>'
-      +           '<tr><td>IVA 19% prorrateado</td><td>$654.446</td></tr>'
-      +           '<tr class="mm-compare-total"><td><strong>Total venta por persona</strong></td><td><strong>$4.098.899</strong></td></tr>'
-      +         '</tbody>'
-      +       '</table>'
-      +       '<p class="mm-compare-foot">Fuente PDF: cotización N° 030, 03 de marzo de 2026, operador Exclusive Nature Tours (Yopal). Tiquetes aéreos ciudad de origen–destino <strong>no</strong> incluidos en la propuesta PDF. Ruta 5 según tabla «Paquete 5» en la página de cotización del sitio.</p>'
       +     '</div>'
       +   '</div>'
       + '</div>';
